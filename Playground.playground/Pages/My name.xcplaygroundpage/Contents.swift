@@ -68,18 +68,21 @@ canvas.fillColor = Color.black
 
 canvas.drawEllipse(at: Point(x: 105, y: 405), width: 50, height: 40)
 
+canvas.drawEllipse(at: Point(x: 188, y: 405), width: 50, height: 40)
+
 canvas.drawEllipse(at: Point(x: 100, y: 325), width: 36, height: 36)
 
 canvas.drawEllipse(at: Point(x: 143, y: 375), width: 28, height: 20)
 
 canvas.drawCurve(from: Point(x: 138, y: 375), to: Point(x: 111, y: 352), control1: Point(x: 140, y: 352), control2: Point(x: 115, y: 346))
 
-canvas.drawCurve(from: Point(x: 142, y: 375), to: Point(x: 175, y: 352), control1: Point(x: 152, y: 355), control2: Point(x: 155, y: 346))
+canvas.drawCurve(from: Point(x: 142, y: 375), to: Point(x: 175, y: 352), control1: Point(x: 152, y: 355), control2: Point(x: 158, y: 346))
 
 canvas.fillColor = Color.white
 
 canvas.drawEllipse(at: Point (x: 111, y: 405), width: 13, height: 8)
 
+canvas.drawEllipse(at: Point (x: 178, y: 405), width: 13, height: 8)
 /*:
  ## Show the Live View
  Don't see any results?
