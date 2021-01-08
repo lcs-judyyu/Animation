@@ -4,7 +4,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 600
+let preferredWidth = 300
 let preferredHeight = 600
 /*:
  ## Required code
@@ -37,8 +37,16 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
+
+canvas.drawAxes(withScale: true, by: 50)
+
 canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
 
+canvas.drawShapesWithBorders = true
+
+canvas.fillColor = Color.blue
+
+canvas.drawEllipse(at: Point (x: 150, y: 400), width: 100, height: 100)
 /*:
  ## Show the Live View
  Don't see any results?
