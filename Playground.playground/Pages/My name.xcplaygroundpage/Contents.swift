@@ -48,15 +48,19 @@ canvas.drawRoundedRectangle(at: Point(x: 0, y: 500), width: 300, height: 100)
 
 canvas.fillColor = Color.green
 
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 35, height: 180)
+canvas.drawRectangle(at: Point(x: 50, y: 75), width: 30, height: 100)
 
 canvas.drawShapesWithBorders = true
 
 canvas.fillColor = Color.black
 
-canvas.drawEllipse(at: Point(x: 80, y: 458), width: 65, height: 50)
+canvas.drawEllipse(at: Point(x: 82, y: 458), width: 65, height: 50)
 
 canvas.drawEllipse(at: Point(x: 218, y: 458), width: 65, height: 50)
+
+canvas.drawEllipse(at: Point(x: 88, y: 320), width: 50, height: 27)
+
+canvas.drawEllipse(at: Point(x: 212, y: 320), width: 50, height: 27)
 
 canvas.fillColor = Color.white
 
@@ -66,23 +70,27 @@ canvas.drawEllipse(at: Point(x: 150, y: 400), width: 180, height: 150)
 
 canvas.fillColor = Color.black
 
-canvas.drawEllipse(at: Point(x: 105, y: 405), width: 50, height: 40)
+canvas.drawEllipse(at: Point(x: 109, y: 405), width: 50, height: 40)
 
-canvas.drawEllipse(at: Point(x: 188, y: 405), width: 50, height: 40)
+canvas.drawEllipse(at: Point(x: 191, y: 405), width: 50, height: 40)
 
-canvas.drawEllipse(at: Point(x: 100, y: 325), width: 36, height: 36)
+canvas.drawEllipse(at: Point(x: 150, y: 375), width: 28, height: 20)
 
-canvas.drawEllipse(at: Point(x: 143, y: 375), width: 28, height: 20)
+canvas.drawCurve(from: Point(x: 147, y: 375), to: Point(x: 120, y: 352), control1: Point(x: 148, y: 355), control2: Point(x: 142, y: 346))
 
-canvas.drawCurve(from: Point(x: 138, y: 375), to: Point(x: 111, y: 352), control1: Point(x: 140, y: 352), control2: Point(x: 115, y: 346))
+canvas.drawCurve(from: Point(x: 153, y: 375), to: Point(x: 180, y: 352), control1: Point(x: 152, y: 355), control2: Point(x: 158, y: 346))
 
-canvas.drawCurve(from: Point(x: 142, y: 375), to: Point(x: 175, y: 352), control1: Point(x: 152, y: 355), control2: Point(x: 158, y: 346))
+canvas.drawEllipse(at: Point(x: 125, y: 265), width: 30, height: 36)
+    
+canvas.drawEllipse(at: Point(x: 175, y: 265), width: 30, height: 36)
+
+cRotation;90
 
 canvas.fillColor = Color.white
 
-canvas.drawEllipse(at: Point (x: 111, y: 405), width: 13, height: 8)
+canvas.drawEllipse(at: Point (x: 115, y: 402), width: 13, height: 8)
 
-canvas.drawEllipse(at: Point (x: 178, y: 405), width: 13, height: 8)
+canvas.drawEllipse(at: Point (x: 185, y: 402), width: 13, height: 8)
 /*:
  ## Show the Live View
  Don't see any results?
