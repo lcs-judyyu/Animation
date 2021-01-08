@@ -40,13 +40,25 @@ PlaygroundPage.current.liveView = canvas
 
 canvas.drawAxes(withScale: true, by: 50)
 
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+canvas.fillColor = Color.green
+
+canvas.drawRectangle(at: Point(x: 50, y: 75), width: 35, height: 180)
 
 canvas.drawShapesWithBorders = true
 
-canvas.fillColor = Color.blue
+canvas.fillColor = Color.white
 
-canvas.drawEllipse(at: Point (x: 150, y: 400), width: 100, height: 100)
+canvas.drawEllipse(at: Point (x: 150, y: 300), width: 120, height: 90)
+
+canvas.drawEllipse(at: Point(x: 150, y: 400), width: 180, height: 150)
+
+canvas.fillColor = Color.black
+
+canvas.drawEllipse(at: Point(x: 105, y: 405), width: 50, height: 40)
+
+canvas.drawCurve(from: Point(x: 138, y: 375), to: Point(x: 111, y: 352), control1: Point(x: 125, y: 364), control2: Point(x: 105, y: 353))
+
+
 /*:
  ## Show the Live View
  Don't see any results?
