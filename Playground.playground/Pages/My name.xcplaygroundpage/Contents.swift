@@ -64,13 +64,15 @@ canvas.drawEllipse(at: Point(x: 210, y: 193), width: 27, height: 86)
 
 canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 5, alpha: 100)
 
-canvas.drawRectangle(at: Point(x: 78, y: 193), width: 30, height: 6)
+canvas.drawRectangle(at: Point(x: 78, y: 193), width: 50, height: 6)
 
-canvas.drawRectangle(at: Point(x: 79, y: 175), width: 70, height: 6)
+canvas.drawRectangle(at: Point(x: 79, y: 175), width: 90, height: 6)
 
-canvas.drawRectangle(at: Point(x: 80, y: 163), width: 55, height: 6)
+canvas.drawRectangle(at: Point(x: 80, y: 163), width: 65, height: 6)
 
-canvas.drawRectangle(at: Point(x: 80, y: 168), width: 36, height: 4)
+canvas.drawRectangle(at: Point(x: 80, y: 168), width: 46, height: 4)
+
+canvas.drawEllipse(at: Point(x: 90, y: 193), width: 26, height: 86)
 
 canvas.fillColor = Color.white
 
@@ -100,6 +102,8 @@ canvas.drawRectangle(at: Point(x: 44.5, y: 320), width: 11, height: 58)
 
 canvas.drawRectangle(at: Point(x: 240, y: 150), width: 20, height: 73)
 
+canvas.drawRectangle(at: Point(x: 243, y: 232), width: 14, height: 82)
+
 canvas.fillColor = Color.init(hue: 128, saturation: 100, brightness: 40, alpha: 100)
 
 canvas.drawRectangle(at: Point(x: 40, y: 150), width: 8, height: 80)
@@ -107,6 +111,12 @@ canvas.drawRectangle(at: Point(x: 40, y: 150), width: 8, height: 80)
 canvas.drawRectangle(at: Point(x: 42, y: 240), width: 5, height: 72)
 
 canvas.drawRectangle(at: Point(x: 44.5, y: 320), width: 3, height: 58)
+
+canvas.drawRectangle(at: Point(x: 240, y: 150), width: 8, height: 73)
+
+canvas.drawRectangle(at: Point(x: 243, y: 232), width: 5, height: 82)
+
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 40)
 
 canvas.drawShapesWithBorders = true
 
