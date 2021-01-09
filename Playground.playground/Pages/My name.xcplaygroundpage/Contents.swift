@@ -44,11 +44,21 @@ canvas.drawShapesWithFill
 
 canvas.fillColor = Color.blue
 
-canvas.drawRoundedRectangle(at: Point(x: 0, y: 500), width: 300, height: 100)
+canvas.drawRoundedRectangle(at: Point(x: 0, y: 400), width: 300, height: 200)
+
+canvas.fillColor = Color.white
+
+canvas.drawEllipse(at: Point(x: 50, y: 556), width: 30, height: 20)
+
+canvas.drawEllipse(at: Point(x: 60, y: 567), width: 30, height: 20)
+
+canvas.drawEllipse(at: Point(x: 76, y: 552), width: 48, height: 27)
 
 canvas.fillColor = Color.green
 
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 30, height: 100)
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 100)
+
+canvas.drawRectangle(at: Point(x: 100, y: 75), width: 23, height: 100)
 
 canvas.drawShapesWithBorders = true
 
