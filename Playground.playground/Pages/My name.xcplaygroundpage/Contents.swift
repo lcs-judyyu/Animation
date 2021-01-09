@@ -58,21 +58,25 @@ canvas.drawEllipse(at: Point(x: 82, y: 458), width: 65, height: 50)
 
 canvas.drawEllipse(at: Point(x: 218, y: 458), width: 65, height: 50)
 
-canvas.drawEllipse(at: Point(x: 88, y: 320), width: 50, height: 27)
+canvas.drawEllipse(at: Point(x: 93, y: 320), width: 50, height: 27)
 
-canvas.drawEllipse(at: Point(x: 212, y: 320), width: 50, height: 27)
+canvas.drawEllipse(at: Point(x: 207, y: 320), width: 50, height: 27)
+
+canvas.drawEllipse(at: Point(x: 129, y: 269), width: 36, height: 67)
+    
+canvas.drawEllipse(at: Point(x: 171, y: 269), width: 36, height: 67)
 
 canvas.fillColor = Color.white
 
-canvas.drawEllipse(at: Point (x: 150, y: 300), width: 120, height: 90)
+canvas.drawEllipse(at: Point (x: 150, y: 310), width: 120, height: 100)
 
 canvas.drawEllipse(at: Point(x: 150, y: 400), width: 180, height: 150)
 
 canvas.fillColor = Color.black
 
-canvas.drawEllipse(at: Point(x: 109, y: 405), width: 50, height: 40)
+canvas.drawEllipse(at: Point(x: 109, y: 405), width: 55, height: 45)
 
-canvas.drawEllipse(at: Point(x: 191, y: 405), width: 50, height: 40)
+canvas.drawEllipse(at: Point(x: 191, y: 405), width: 55, height: 45)
 
 canvas.drawEllipse(at: Point(x: 150, y: 375), width: 28, height: 20)
 
@@ -80,17 +84,11 @@ canvas.drawCurve(from: Point(x: 147, y: 375), to: Point(x: 120, y: 352), control
 
 canvas.drawCurve(from: Point(x: 153, y: 375), to: Point(x: 180, y: 352), control1: Point(x: 152, y: 355), control2: Point(x: 158, y: 346))
 
-canvas.drawEllipse(at: Point(x: 125, y: 265), width: 30, height: 36)
-    
-canvas.drawEllipse(at: Point(x: 175, y: 265), width: 30, height: 36)
-
-cRotation;90
-
 canvas.fillColor = Color.white
 
-canvas.drawEllipse(at: Point (x: 115, y: 402), width: 13, height: 8)
+canvas.drawEllipse(at: Point (x: 115, y: 402), width: 15, height: 9)
 
-canvas.drawEllipse(at: Point (x: 185, y: 402), width: 13, height: 8)
+canvas.drawEllipse(at: Point (x: 185, y: 402), width: 15, height: 9)
 /*:
  ## Show the Live View
  Don't see any results?
