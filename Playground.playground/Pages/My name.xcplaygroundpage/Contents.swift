@@ -44,7 +44,11 @@ canvas.drawShapesWithFill
 
 canvas.fillColor = Color.blue
 
-canvas.drawRoundedRectangle(at: Point(x: 0, y: 400), width: 300, height: 200)
+canvas.drawRoundedRectangle(at: Point(x: 0, y: 420), width: 300, height: 200)
+
+canvas.fillColor = Color.init(hue: 240, saturation: 100, brightness: 40, alpha: 100)
+
+canvas.drawRectangle(at: Point(x: 0, y: 330), width: 300, height: 100)
 
 canvas.fillColor = Color.white
 
@@ -54,11 +58,33 @@ canvas.drawEllipse(at: Point(x: 60, y: 567), width: 30, height: 20)
 
 canvas.drawEllipse(at: Point(x: 76, y: 552), width: 48, height: 27)
 
+canvas.drawEllipse(at: Point(x: 250, y: 514), width: 50, height: 28)
+
+canvas.drawEllipse(at: Point(x: 265, y: 527), width: 34, height: 20)
+
+canvas.drawEllipse(at: Point(x: 230, y: 528), width: 47, height: 25)
+
+canvas.fillColor = Color.init(hue: 120, saturation: 100, brightness: 33, alpha: 100)
+
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 150)
+
 canvas.fillColor = Color.green
 
-canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 100)
+canvas.drawRectangle(at: Point(x: 40, y: 150), width: 20, height: 80)
 
-canvas.drawRectangle(at: Point(x: 100, y: 75), width: 23, height: 100)
+canvas.drawRectangle(at: Point(x: 42, y: 240), width: 16, height: 72)
+
+canvas.drawRectangle(at: Point(x: 44.5, y: 320), width: 11, height: 58)
+
+canvas.drawRectangle(at: Point(x: 240, y: 150), width: 20, height: 73)
+
+canvas.fillColor = Color.init(hue: 128, saturation: 100, brightness: 40, alpha: 100)
+
+canvas.drawRectangle(at: Point(x: 40, y: 150), width: 8, height: 80)
+
+canvas.drawRectangle(at: Point(x: 42, y: 240), width: 5, height: 72)
+
+canvas.drawRectangle(at: Point(x: 44.5, y: 320), width: 3, height: 58)
 
 canvas.drawShapesWithBorders = true
 
@@ -88,7 +114,7 @@ canvas.drawEllipse(at: Point(x: 109, y: 405), width: 55, height: 45)
 
 canvas.drawEllipse(at: Point(x: 191, y: 405), width: 55, height: 45)
 
-canvas.drawEllipse(at: Point(x: 150, y: 375), width: 28, height: 20)
+canvas.drawEllipse(at: Point(x: 150, y: 375), width: 28, height: 16)
 
 canvas.drawCurve(from: Point(x: 147, y: 375), to: Point(x: 120, y: 352), control1: Point(x: 148, y: 355), control2: Point(x: 142, y: 346))
 
