@@ -100,9 +100,9 @@ canvas.drawRectangle(at: Point(x: 42, y: 240), width: 16, height: 72)
 
 canvas.drawRectangle(at: Point(x: 44.5, y: 320), width: 11, height: 58)
 
-canvas.drawRectangle(at: Point(x: 240, y: 150), width: 20, height: 73)
+canvas.drawRectangle(at: Point(x: 255, y: 150), width: 20, height: 73)
 
-canvas.drawRectangle(at: Point(x: 243, y: 232), width: 14, height: 82)
+canvas.drawRectangle(at: Point(x: 258, y: 232), width: 14, height: 82)
 
 canvas.fillColor = Color.init(hue: 128, saturation: 100, brightness: 40, alpha: 100)
 
@@ -112,11 +112,11 @@ canvas.drawRectangle(at: Point(x: 42, y: 240), width: 5, height: 72)
 
 canvas.drawRectangle(at: Point(x: 44.5, y: 320), width: 3, height: 58)
 
-canvas.drawRectangle(at: Point(x: 240, y: 150), width: 8, height: 73)
+canvas.drawRectangle(at: Point(x: 255, y: 150), width: 8, height: 73)
 
-canvas.drawRectangle(at: Point(x: 243, y: 232), width: 5, height: 82)
+canvas.drawRectangle(at: Point(x: 258, y: 232), width: 5, height: 82)
 
-canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 40)
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 60)
 
 canvas.drawShapesWithBorders = true
 
@@ -151,6 +151,14 @@ canvas.drawEllipse(at: Point(x: 150, y: 375), width: 28, height: 16)
 canvas.drawCurve(from: Point(x: 147, y: 375), to: Point(x: 120, y: 352), control1: Point(x: 148, y: 355), control2: Point(x: 142, y: 346))
 
 canvas.drawCurve(from: Point(x: 153, y: 375), to: Point(x: 180, y: 352), control1: Point(x: 152, y: 355), control2: Point(x: 158, y: 346))
+
+canvas.drawShapesWithBorders = false
+
+canvas.fillColor = Color.init(hue: 0, saturation: 55, brightness: 70, alpha: 50)
+
+canvas.drawEllipse(at: Point(x: 200, y: 373), width: 30, height: 16)
+
+canvas.drawEllipse(at: Point(x: 100, y: 373), width: 30, height: 16)
 
 canvas.fillColor = Color.white
 
