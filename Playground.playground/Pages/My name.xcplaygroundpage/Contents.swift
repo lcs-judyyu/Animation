@@ -44,11 +44,33 @@ canvas.drawShapesWithFill
 
 canvas.fillColor = Color.blue
 
-canvas.drawRoundedRectangle(at: Point(x: 0, y: 420), width: 300, height: 200)
+canvas.drawRoundedRectangle(at: Point(x: 0, y: 400), width: 300, height: 200)
 
-canvas.fillColor = Color.init(hue: 240, saturation: 100, brightness: 40, alpha: 100)
+canvas.fillColor = Color.init(hue: 190, saturation: 100, brightness: 50, alpha: 60)
 
-canvas.drawRectangle(at: Point(x: 0, y: 330), width: 300, height: 100)
+canvas.drawRectangle(at: Point(x: 0, y: 330), width: 300, height: 130)
+
+canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 10, alpha: 100)
+
+canvas.drawRectangle(at: Point(x: 90, y: 150), width: 120, height: 86)
+
+canvas.drawEllipse(at: Point(x: 90, y: 193), width: 26, height: 86)
+
+canvas.drawEllipse(at: Point(x: 210, y: 193), width: 27, height: 86)
+
+canvas.fillColor = Color.init(hue: 60, saturation: 90, brightness: 70, alpha: 100)
+
+canvas.drawEllipse(at: Point(x: 210, y: 193), width: 27, height: 86)
+
+canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 5, alpha: 100)
+
+canvas.drawRectangle(at: Point(x: 78, y: 193), width: 30, height: 6)
+
+canvas.drawRectangle(at: Point(x: 79, y: 175), width: 70, height: 6)
+
+canvas.drawRectangle(at: Point(x: 80, y: 163), width: 55, height: 6)
+
+canvas.drawRectangle(at: Point(x: 80, y: 168), width: 36, height: 4)
 
 canvas.fillColor = Color.white
 
