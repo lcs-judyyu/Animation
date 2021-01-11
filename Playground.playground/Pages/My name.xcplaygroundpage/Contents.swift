@@ -44,6 +44,8 @@ canvas.drawShapesWithFill
 
 canvas.fillColor = Color.blue
 
+//sky
+
 canvas.drawRoundedRectangle(at: Point(x: 0, y: 400), width: 300, height: 200)
 
 canvas.fillColor = Color.init(hue: 190, saturation: 100, brightness: 50, alpha: 60)
@@ -51,6 +53,8 @@ canvas.fillColor = Color.init(hue: 190, saturation: 100, brightness: 50, alpha: 
 canvas.drawRectangle(at: Point(x: 0, y: 330), width: 300, height: 130)
 
 canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 10, alpha: 100)
+
+//log
 
 canvas.drawRectangle(at: Point(x: 90, y: 150), width: 120, height: 86)
 
@@ -76,6 +80,8 @@ canvas.drawEllipse(at: Point(x: 90, y: 193), width: 26, height: 86)
 
 canvas.fillColor = Color.white
 
+//clouds
+
 canvas.drawEllipse(at: Point(x: 50, y: 556), width: 30, height: 20)
 
 canvas.drawEllipse(at: Point(x: 60, y: 567), width: 30, height: 20)
@@ -88,11 +94,15 @@ canvas.drawEllipse(at: Point(x: 265, y: 527), width: 34, height: 20)
 
 canvas.drawEllipse(at: Point(x: 230, y: 528), width: 47, height: 25)
 
+//ground
+
 canvas.fillColor = Color.init(hue: 120, saturation: 100, brightness: 33, alpha: 100)
 
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 150)
 
 canvas.fillColor = Color.green
+
+//bamboo
 
 canvas.drawRectangle(at: Point(x: 40, y: 150), width: 20, height: 80)
 
@@ -116,19 +126,27 @@ canvas.drawRectangle(at: Point(x: 255, y: 150), width: 8, height: 73)
 
 canvas.drawRectangle(at: Point(x: 258, y: 232), width: 5, height: 82)
 
+//ground
+
 canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 60)
 
 canvas.drawShapesWithBorders = true
 
 canvas.fillColor = Color.black
 
+//ears
+
 canvas.drawEllipse(at: Point(x: 82, y: 458), width: 65, height: 50)
 
 canvas.drawEllipse(at: Point(x: 218, y: 458), width: 65, height: 50)
 
+//hands
+
 canvas.drawEllipse(at: Point(x: 93, y: 320), width: 50, height: 27)
 
 canvas.drawEllipse(at: Point(x: 207, y: 320), width: 50, height: 27)
+
+//feet
 
 canvas.drawEllipse(at: Point(x: 129, y: 269), width: 36, height: 67)
     
@@ -136,17 +154,27 @@ canvas.drawEllipse(at: Point(x: 171, y: 269), width: 36, height: 67)
 
 canvas.fillColor = Color.white
 
+//body
+
 canvas.drawEllipse(at: Point (x: 150, y: 310), width: 120, height: 100)
+
+//head
 
 canvas.drawEllipse(at: Point(x: 150, y: 400), width: 180, height: 150)
 
 canvas.fillColor = Color.black
 
+//eyes
+
 canvas.drawEllipse(at: Point(x: 109, y: 405), width: 55, height: 45)
 
 canvas.drawEllipse(at: Point(x: 191, y: 405), width: 55, height: 45)
 
+//nose
+
 canvas.drawEllipse(at: Point(x: 150, y: 375), width: 28, height: 16)
+
+//mouth
 
 canvas.drawCurve(from: Point(x: 147, y: 375), to: Point(x: 120, y: 352), control1: Point(x: 148, y: 355), control2: Point(x: 142, y: 346))
 
@@ -156,11 +184,15 @@ canvas.drawShapesWithBorders = false
 
 canvas.fillColor = Color.init(hue: 0, saturation: 55, brightness: 70, alpha: 50)
 
+//blush
+
 canvas.drawEllipse(at: Point(x: 200, y: 373), width: 30, height: 16)
 
 canvas.drawEllipse(at: Point(x: 100, y: 373), width: 30, height: 16)
 
 canvas.fillColor = Color.white
+
+//eyes
 
 canvas.drawEllipse(at: Point (x: 115, y: 402), width: 15, height: 9)
 
