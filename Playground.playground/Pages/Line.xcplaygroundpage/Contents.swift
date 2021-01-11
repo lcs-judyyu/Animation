@@ -6,6 +6,7 @@
  */
 let preferredWidth = 350
 let preferredHeight = 350
+let background = Color.black
 /*:
  ## Required code
  
@@ -41,11 +42,11 @@ canvas.lineColor = Color.red
 
 canvas.drawLine(from: Point(x: 0, y: 0), to: Point(x: 350, y: 50))
 
-canvas.lineColor = Color.orange
+canvas.lineColor = Color.init(hue: 30, saturation: 100, brightness: 70, alpha:100)
 
 canvas.drawLine(from: Point(x: 50, y: 0), to: Point(x: 350, y: 100))
 
-canvas.lineColor = Color.yellow
+canvas.lineColor = Color.init(hue: 60, saturation: 100, brightness: 70, alpha:100)
 
 canvas.drawLine(from: Point(x: 100, y: 0), to: Point(x: 350, y: 150))
 
@@ -53,15 +54,15 @@ canvas.lineColor = Color.green
 
 canvas.drawLine(from: Point(x: 150, y: 0), to: Point(x: 350, y: 200))
 
-canvas.lineColor = Color.init(hue: 190, saturation: 100, brightness: 50, alpha: 60)
+canvas.lineColor = Color.init(hue: 190, saturation: 100, brightness: 50, alpha:100)
 
 canvas.drawLine(from: Point(x: 200, y: 0), to: Point(x: 350, y: 250))
 
-canvas.lineColor = Color.blue
+canvas.lineColor = Color.init(hue: 220, saturation: 100, brightness: 50, alpha:100)
 
 canvas.drawLine(from: Point(x: 250, y: 0), to: Point(x: 350, y: 300))
 
-canvas.lineColor = Color.purple
+canvas.lineColor = Color.init(hue: 270, saturation: 100, brightness: 70, alpha:100)
 
 canvas.drawLine(from: Point(x: 300, y: 0), to: Point(x: 350, y: 350))
 
