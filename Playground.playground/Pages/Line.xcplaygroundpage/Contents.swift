@@ -38,6 +38,9 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
+
+//bottom right corner
+
 canvas.lineColor = Color.red
 
 canvas.drawLine(from: Point(x: 0, y: 0), to: Point(x: 350, y: 50))
@@ -65,6 +68,36 @@ canvas.drawLine(from: Point(x: 250, y: 0), to: Point(x: 350, y: 300))
 canvas.lineColor = Color.init(hue: 270, saturation: 100, brightness: 70, alpha:100)
 
 canvas.drawLine(from: Point(x: 300, y: 0), to: Point(x: 350, y: 350))
+
+//top left corner
+
+canvas.lineColor = Color.red
+
+canvas.drawLine(from: Point(x: 0, y: 0), to: Point(x: 50, y: 350))
+
+canvas.lineColor = Color.init(hue: 30, saturation: 100, brightness: 70, alpha:100)
+
+canvas.drawLine(from: Point(x: 0, y: 50), to: Point(x: 100, y: 350))
+
+canvas.lineColor = Color.init(hue: 60, saturation: 100, brightness: 70, alpha:100)
+
+canvas.drawLine(from: Point(x: 0, y: 100), to: Point(x: 150, y: 350))
+
+canvas.lineColor = Color.green
+
+canvas.drawLine(from: Point(x: 0, y: 150), to: Point(x: 200, y: 350))
+
+canvas.lineColor = Color.init(hue: 190, saturation: 100, brightness: 50, alpha:100)
+
+canvas.drawLine(from: Point(x: 0, y: 200), to: Point(x: 250, y: 350))
+
+canvas.lineColor = Color.init(hue: 220, saturation: 100, brightness: 50, alpha:100)
+
+canvas.drawLine(from: Point(x: 0, y: 250), to: Point(x: 300, y: 350))
+
+canvas.lineColor = Color.init(hue: 270, saturation: 100, brightness: 70, alpha:100)
+
+canvas.drawLine(from: Point(x: 0, y: 300), to: Point(x: 350, y: 350))
 
 
 /*:
