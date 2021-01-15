@@ -36,7 +36,7 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// axes
 
 canvas.drawAxes(withScale: true, by: 50)
 
@@ -48,9 +48,9 @@ canvas.fillColor = Color.blue
 
 canvas.drawRoundedRectangle(at: Point(x: 0, y: 400), width: 300, height: 200)
 
-canvas.fillColor = Color.init(hue: 190, saturation: 100, brightness: 50, alpha: 60)
+canvas.fillColor = Color.init(hue: 195, saturation: 100, brightness: 80, alpha: 100)
 
-canvas.drawRectangle(at: Point(x: 0, y: 330), width: 300, height: 130)
+canvas.drawRectangle(at: Point(x: 0, y: 330), width: 300, height: 100)
 
 canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 10, alpha: 100)
 
@@ -62,9 +62,13 @@ canvas.drawEllipse(at: Point(x: 90, y: 193), width: 26, height: 86)
 
 canvas.drawEllipse(at: Point(x: 210, y: 193), width: 27, height: 86)
 
-canvas.fillColor = Color.init(hue: 60, saturation: 90, brightness: 70, alpha: 100)
+canvas.fillColor = Color.init(hue:40, saturation: 70, brightness: 90, alpha: 100)
 
 canvas.drawEllipse(at: Point(x: 210, y: 193), width: 27, height: 86)
+
+canvas.fillColor = Color.init(hue:40, saturation: 100, brightness: 80, alpha: 80)
+
+canvas.drawEllipse(at: Point(x: 210, y: 193), width: 15, height: 64)
 
 canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 5, alpha: 100)
 
@@ -114,7 +118,7 @@ canvas.drawRectangle(at: Point(x: 255, y: 150), width: 20, height: 73)
 
 canvas.drawRectangle(at: Point(x: 258, y: 232), width: 14, height: 82)
 
-canvas.fillColor = Color.init(hue: 128, saturation: 100, brightness: 40, alpha: 100)
+canvas.fillColor = Color.init(hue: 128, saturation: 100, brightness: 40, alpha: 80)
 
 canvas.drawRectangle(at: Point(x: 40, y: 150), width: 8, height: 80)
 
@@ -182,7 +186,7 @@ canvas.drawCurve(from: Point(x: 153, y: 375), to: Point(x: 180, y: 352), control
 
 canvas.drawShapesWithBorders = false
 
-canvas.fillColor = Color.init(hue: 0, saturation: 55, brightness: 70, alpha: 50)
+canvas.fillColor = Color.init(hue: 0, saturation: 75, brightness: 70, alpha: 50)
 
 //blush
 
