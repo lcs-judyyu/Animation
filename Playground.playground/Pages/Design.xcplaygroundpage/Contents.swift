@@ -91,10 +91,11 @@ canvas.drawShapesWithFill = false
 canvas.rotate(by: 30)
 
 //show axes
-canvas.drawAxes(withScale: true, by: 50)
+canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
 
 //left ear
-canvas.drawEllipse(at: Point(x: 165, y: 540), width: 75, height: 220, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 165, y: 520), width: 95, height: 220, borderWidth: 4)
 
 
 
