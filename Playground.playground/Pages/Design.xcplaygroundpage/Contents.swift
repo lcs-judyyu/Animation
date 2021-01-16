@@ -87,21 +87,41 @@ canvas.borderColor = Color.black
 //set fill
 canvas.drawShapesWithFill = false
 
+//left ear
 //rotate
 canvas.rotate(by: 30)
 
 //show axes
-canvas.drawAxes()
+//canvas.drawAxes()
 //canvas.drawAxes(withScale: true, by: 50)
 
-//left ear
-canvas.drawEllipse(at: Point(x: 165, y: 520), width: 95, height: 220, borderWidth: 4)
+//big circle
+canvas.drawEllipse(at: Point(x: 150, y: 520), width: 95, height: 220, borderWidth: 4)
+//small ear
+canvas.drawEllipse(at: Point(x: 150, y: 460), width: 40, height: 100, borderWidth: 4)
 
+//right ear
+//rotate
+canvas.rotate(by: -60)
 
+//show axes
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
 
+//big circle
+canvas.drawEllipse(at: Point(x: -150, y: 520), width: 95, height: 220, borderWidth: 4)
+//small ear
+canvas.drawEllipse(at: Point(x: -150, y: 460), width: 40, height: 100, borderWidth: 4)
 
+//fur
+//rotate
+canvas.rotate(by: 30)
 
+//show axes
+//canvas.drawAxes()
+canvas.drawAxes(withScale: true, by: 25)
 
+//first curve
 
 
 
