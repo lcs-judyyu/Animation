@@ -122,7 +122,26 @@ canvas.rotate(by: 30)
 canvas.drawAxes(withScale: true, by: 25)
 
 //first curve
+canvas.drawCurve(from: Point(x: -25, y: 460), to: Point(x: -20, y: 475), control1: Point(x: -25, y: 500), control2: Point(x: 0, y: 500))
 
+//second curve
+//canvas.drawCurve(from: Point(x: -25, y: 460), to: Point(x: -20, y: 475), control1: Point(x: -25, y: 500), control2: Point(x: 0, y: 500))
+
+//third curve
+//canvas.drawCurve(from: Point(x: -20, y: 475), to: Point(x: -13, y: 470), control1: Point(x: -25, y: 500), control2: Point(x: 0, y: 500))
+
+//feet
+//rotate
+canvas.rotate(by: 70)
+
+//show axes
+canvas.drawAxes()
+canvas.drawAxes(withScale: true, by: 50)
+
+//left foot
+var leftfootVertices: [Point] = []
+leftfootVertices.append(Point(x: 0, y: 0))
+canvas.drawCustomShape(with: leftfootVertices)
 
 
 /*:
