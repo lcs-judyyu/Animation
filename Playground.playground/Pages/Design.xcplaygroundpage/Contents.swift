@@ -37,13 +37,14 @@ PlaygroundPage.current.liveView = canvas
  */
 
 //axes
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes(withScale: true, by: 50)
 
 //translate axes to the middle
 canvas.translate(to: Point(x: 325, y: 0))
 
 //show axes
 canvas.drawAxes()
+canvas.drawAxes(withScale: true, by: 50)
 
 //set border
 canvas.drawShapesWithBorders = true
@@ -99,7 +100,7 @@ canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
 
 //set color
-canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
 
 //rectangle in bottom middle
 canvas.drawRectangle(at: Point(x: -80, y: 150), width: 160, height: 200)
@@ -110,16 +111,47 @@ canvas.drawRectangle(at: Point(x: -125, y: 200), width: 50, height: 50)
 //right
 canvas.drawRectangle(at: Point(x: 75, y: 200), width: 50, height: 50)
 
+//cover lines of ears
+canvas.drawEllipse(at: Point(x: 0, y: 368), width: 245, height: 185)
 
+//set border
+canvas.drawShapesWithBorders = true
+canvas.borderColor = Color.black
 
+//set fill
+canvas.drawShapesWithFill = false
+
+//show axes
+canvas.drawAxes()
+canvas.drawAxes(withScale: true, by: 25)
+
+//eyes
+//left eye
+canvas.drawEllipse(at: Point(x: -52, y: 370), width: 9, height: 30, borderWidth: 4)
+
+//right eye
+canvas.drawEllipse(at: Point(x: 52, y: 370), width: 9, height: 30, borderWidth: 4)
+
+//eyebrow
+//left
+canvas.drawCurve(from: Point(x: -12, y: 350), to: Point(x: -125, y: 367), control1: Point(x: -25, y: 450), control2: Point(x: -100, y: 375))
+
+//nose
+canvas.defaultBorderWidth = 6
+var noseVertices: [Point] = []
+noseVertices.append(Point(x: 0, y: 330))
+noseVertices.append(Point(x: -12, y: 350))
+noseVertices.append(Point(x: 12, y: 350))
+noseVertices.append(Point(x: 0, y: 330))
+canvas.drawCustomShape(with: noseVertices)
 
 //fur
 //show axes
 //canvas.drawAxes()
-canvas.drawAxes(withScale: true, by: 25)
+//canvas.drawAxes(withScale: true, by: 25)
 
 //first curve
-canvas.drawCurve(from: Point(x: -25, y: 460), to: Point(x: -20, y: 475), control1: Point(x: -25, y: 500), control2: Point(x: 0, y: 500))
+//canvas.drawCurve(from: Point(x: -25, y: 460), to: Point(x: -20, y: 475), control1: Point(x: -25, y: 500), control2: Point(x: 0, y: 500))
 
 //second curve
 //canvas.drawCurve(from: Point(x: -25, y: 460), to: Point(x: -20, y: 475), control1: Point(x: -25, y: 500), control2: Point(x: 0, y: 500))
@@ -157,11 +189,6 @@ canvas.drawCurve(from: Point(x: -25, y: 460), to: Point(x: -20, y: 475), control
 //translate axes back to the middle
 //canvas.translate(to: Point(x: 325, y: 0))
 
-//eyes
-//left eye
-//canvas.drawEllipse(at: Point(x: -65, y: 370), width: 5, height: 10, borderWidth: 4)
-
-//right eye
 
 /*:
  ## Show the Live View
