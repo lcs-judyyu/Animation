@@ -52,7 +52,7 @@ canvas.borderColor = Color.black
 //set fill
 canvas.drawShapesWithFill = false
 
-// head
+//head
 canvas.drawEllipse(at: Point(x: 0, y: 368), width: 250, height: 190, borderWidth: 4)
 
 //body
@@ -61,32 +61,7 @@ canvas.drawEllipse(at: Point(x: 0, y: 160), width: 325, height: 200, borderWidth
 //topcircle
 canvas.drawEllipse(at: Point(x: 0, y: 250), width: 210, height: 140, borderWidth: 4)
 
-//cover lines of head and body
-//set border
-//canvas.drawShapesWithBorders = false
-
-//set fill
-//canvas.drawShapesWithFill = true
-
-//set color
-//canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
-
-//rectangle in bottom middle
-//canvas.drawRectangle(at: Point(x: -80, y: 150), width: 160, height: 200)
-
-//two rectangle
-//canvas.drawRectangle(at: Point(x: -125, y: 200), width: 50, height: 50)
-
-//canvas.drawRectangle(at: Point(x: 75, y: 200), width: 50, height: 50)
-
 //ears
-//set border
-canvas.drawShapesWithBorders = true
-canvas.borderColor = Color.black
-
-//set fill
-canvas.drawShapesWithFill = false
-
 //left ear
 //rotate
 canvas.rotate(by: 30)
@@ -113,10 +88,32 @@ canvas.drawEllipse(at: Point(x: -150, y: 520), width: 95, height: 220, borderWid
 //small ear
 canvas.drawEllipse(at: Point(x: -150, y: 460), width: 40, height: 100, borderWidth: 4)
 
-//fur
 //rotate
 canvas.rotate(by: 30)
 
+//cover lines of head, body and ears
+//set border
+canvas.drawShapesWithBorders = false
+
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
+
+//rectangle in bottom middle
+canvas.drawRectangle(at: Point(x: -80, y: 150), width: 160, height: 200)
+
+//two rectangle for head and body
+//left
+canvas.drawRectangle(at: Point(x: -125, y: 200), width: 50, height: 50)
+//right
+canvas.drawRectangle(at: Point(x: 75, y: 200), width: 50, height: 50)
+
+
+
+
+//fur
 //show axes
 //canvas.drawAxes()
 canvas.drawAxes(withScale: true, by: 25)
@@ -131,18 +128,40 @@ canvas.drawCurve(from: Point(x: -25, y: 460), to: Point(x: -20, y: 475), control
 //canvas.drawCurve(from: Point(x: -20, y: 475), to: Point(x: -13, y: 470), control1: Point(x: -25, y: 500), control2: Point(x: 0, y: 500))
 
 //feet
+//translate axes to align the middle of left foot
+//canvas.translate(to: Point(x: 325, y: 50))
+
 //rotate
-canvas.rotate(by: 70)
+//canvas.rotate(by: 70)
 
 //show axes
-canvas.drawAxes()
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
 
 //left foot
-var leftfootVertices: [Point] = []
-leftfootVertices.append(Point(x: 0, y: 0))
-canvas.drawCustomShape(with: leftfootVertices)
+//var leftfootVertices: [Point] = []
+//leftfootVertices.append(Point(x: 0, y: 0))
+//canvas.drawCustomShape(with: leftfootVertices)
 
+//right foot
+//rotate
+//canvas.rotate(by: -140)
+
+//show axes
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
+
+//rotate back
+//canvas.rotate(by: -70)
+
+//translate axes back to the middle
+//canvas.translate(to: Point(x: 325, y: 0))
+
+//eyes
+//left eye
+//canvas.drawEllipse(at: Point(x: -65, y: 370), width: 5, height: 10, borderWidth: 4)
+
+//right eye
 
 /*:
  ## Show the Live View
