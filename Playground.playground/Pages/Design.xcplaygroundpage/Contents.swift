@@ -44,7 +44,7 @@ canvas.translate(to: Point(x: 325, y: 0))
 
 //show axes
 canvas.drawAxes()
-canvas.drawAxes(withScale: true, by: 50)
+canvas.drawAxes(withScale: true, by: 25)
 
 //set border
 canvas.drawShapesWithBorders = true
@@ -210,24 +210,37 @@ canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
 //an oval
 canvas.drawEllipse(at: Point(x: -8, y: 458), width: 49, height: 21)
 
-
-
-
 //feet
 //translate axes to align the middle of left foot
-//canvas.translate(to: Point(x: 325, y: 50))
+canvas.translate(to: Point(x: 0, y: 50))
 
 //rotate
-//canvas.rotate(by: 70)
+canvas.rotate(by: 70)
 
 //show axes
-//canvas.drawAxes()
-//canvas.drawAxes(withScale: true, by: 50)
+canvas.drawAxes()
+canvas.drawAxes(withScale: true, by: 50)
+
+//set border
+canvas.drawShapesWithBorders = true
+canvas.borderColor = Color.black
+canvas.defaultBorderWidth = 6
+
+//set fill
+canvas.drawShapesWithFill = false
 
 //left foot
-//var leftfootVertices: [Point] = []
-//leftfootVertices.append(Point(x: 0, y: 0))
-//canvas.drawCustomShape(with: leftfootVertices)
+var leftfootVertices: [Point] = []
+leftfootVertices.append(Point(x: 0, y: 40))
+leftfootVertices.append(Point(x: -10, y: 40))
+leftfootVertices.append(Point(x: -15, y: 45))
+leftfootVertices.append(Point(x: -17, y: 49))
+leftfootVertices.append(Point(x: -37, y: 125))
+leftfootVertices.append(Point(x: -20, y: 230))
+leftfootVertices.append(Point(x: -5, y: 240))
+leftfootVertices.append(Point(x: 0, y: 240))
+leftfootVertices.append(Point(x: 0, y: 70))
+canvas.drawCustomShape(with: leftfootVertices)
 
 //right foot
 //rotate
