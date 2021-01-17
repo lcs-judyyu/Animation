@@ -56,7 +56,55 @@ canvas.drawShapesWithFill = false
 //head
 canvas.drawEllipse(at: Point(x: 0, y: 368), width: 250, height: 190, borderWidth: 4)
 
+//tail
+//set border
+canvas.drawShapesWithBorders = true
+canvas.borderColor = Color.black
+
+//set fill
+canvas.drawShapesWithFill = false
+
+canvas.drawEllipse(at: Point(x: 170, y: 180), width: 60, height: 60, borderWidth: 4)
+
+//draw circle around
+//set border
+canvas.drawShapesWithBorders = true
+canvas.borderColor = Color.black
+
+//set fill
+canvas.drawShapesWithFill = false
+
+//circle from left to right, top to bottom
+canvas.drawEllipse(at: Point(x: 153, y: 205), width: 9, height: 9, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 160, y: 210), width: 10, height: 10, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 170, y: 212), width: 10, height: 10, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 181, y: 210), width: 8, height: 8, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 191, y: 203), width: 12, height: 12, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 198, y: 195), width: 9, height: 9, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 202, y: 186), width: 7, height: 7, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 201, y: 179), width: 9, height: 9, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 198, y: 169), width: 12, height: 12, borderWidth: 4)
+
+//cover lines of tail
+//set border
+canvas.drawShapesWithBorders = false
+
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
+
+canvas.drawEllipse(at: Point(x: 170, y: 180), width: 65, height: 65)
+
 //body
+//set border
+canvas.drawShapesWithBorders = true
+canvas.borderColor = Color.black
+
+//set fill
+canvas.drawShapesWithFill = false
+
 //bottom circle
 canvas.drawEllipse(at: Point(x: 0, y: 160), width: 325, height: 200, borderWidth: 4)
 //topcircle
@@ -205,7 +253,7 @@ canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
 
 //set color
-canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
 
 //right oval
 canvas.drawEllipse(at: Point(x: -6, y: 458), width: 45, height: 21)
@@ -291,7 +339,7 @@ canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
 
 //set color
-canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
 
 //an oval
 canvas.drawEllipse(at: Point(x: -1, y: 100), width: 30, height: 110)
@@ -383,7 +431,7 @@ canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
 
 //set color
-canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
 
 //an oval
 canvas.drawEllipse(at: Point(x: 1, y: 100), width: 30, height: 110)
@@ -421,6 +469,9 @@ canvas.translate(to: Point(x: 0, y: -50))
 //show axes
 canvas.drawAxes()
 canvas.drawAxes(withScale: true, by: 50)
+
+//hands
+
 
 
 /*:
