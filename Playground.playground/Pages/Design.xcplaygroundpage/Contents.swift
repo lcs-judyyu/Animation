@@ -218,21 +218,21 @@ canvas.translate(to: Point(x: 0, y: 50))
 canvas.rotate(by: 70)
 
 //show axes
-canvas.drawAxes()
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
 
 //set border
 canvas.drawShapesWithBorders = true
 canvas.borderColor = Color.black
-canvas.defaultBorderWidth = 6
+canvas.defaultBorderWidth = 8
 
 //set fill
 canvas.drawShapesWithFill = false
 
 //left foot
 var leftfootVertices: [Point] = []
-leftfootVertices.append(Point(x: 0, y: 40))
-leftfootVertices.append(Point(x: -8, y: 42))
+leftfootVertices.append(Point(x: 0, y: 42))
+leftfootVertices.append(Point(x: -8, y: 44))
 leftfootVertices.append(Point(x: -14, y: 48))
 leftfootVertices.append(Point(x: -19, y: 55))
 leftfootVertices.append(Point(x: -23, y: 61))
@@ -270,23 +270,114 @@ leftfootVertices.append(Point(x: 25, y: 65))
 leftfootVertices.append(Point(x: 23, y: 61))
 leftfootVertices.append(Point(x: 19, y: 55))
 leftfootVertices.append(Point(x: 14, y: 48))
-leftfootVertices.append(Point(x: 8, y: 42))
-leftfootVertices.append(Point(x: 0, y: 40))
+leftfootVertices.append(Point(x: 8, y: 44))
+leftfootVertices.append(Point(x: 0, y: 42))
 canvas.drawCustomShape(with: leftfootVertices)
+
+//cover lines of left foot
+//set border
+canvas.drawShapesWithBorders = false
+
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
+
+//an oval
+canvas.drawEllipse(at: Point(x: -1, y: 100), width: 30, height: 110)
+
+//another oval
+canvas.drawEllipse(at: Point(x: 21, y: 175), width: 50, height: 110)
+
+//circles in left foot
+//set border
+canvas.drawShapesWithBorders = true
+canvas.borderColor = Color.black
+canvas.defaultBorderWidth = 8
+
+//set fill
+canvas.drawShapesWithFill = false
 
 //right foot
 //rotate
-//canvas.rotate(by: -140)
+canvas.rotate(by: -140)
 
 //show axes
-//canvas.drawAxes()
-//canvas.drawAxes(withScale: true, by: 50)
+canvas.drawAxes()
+canvas.drawAxes(withScale: true, by: 50)
+
+var rightfootVertices: [Point] = []
+rightfootVertices.append(Point(x: 0, y: 42))
+rightfootVertices.append(Point(x: -8, y: 44))
+rightfootVertices.append(Point(x: -14, y: 48))
+rightfootVertices.append(Point(x: -19, y: 55))
+rightfootVertices.append(Point(x: -23, y: 61))
+rightfootVertices.append(Point(x: -25, y: 65))
+rightfootVertices.append(Point(x: -32, y: 80))
+rightfootVertices.append(Point(x: -35, y: 89))
+rightfootVertices.append(Point(x: -40, y: 110))
+rightfootVertices.append(Point(x: -43, y: 122))
+rightfootVertices.append(Point(x: -46, y: 146))
+rightfootVertices.append(Point(x: -48, y: 175))
+rightfootVertices.append(Point(x: -47.5, y: 188))
+rightfootVertices.append(Point(x: -46.5, y: 200))
+rightfootVertices.append(Point(x: -42, y: 220))
+rightfootVertices.append(Point(x: -38, y: 227))
+rightfootVertices.append(Point(x: -31, y: 236))
+rightfootVertices.append(Point(x: -25, y: 240))
+rightfootVertices.append(Point(x: -16, y: 245))
+rightfootVertices.append(Point(x: -8.5, y: 247))
+rightfootVertices.append(Point(x: 0, y: 248))
+rightfootVertices.append(Point(x: 8.5, y: 247))
+rightfootVertices.append(Point(x: 16, y: 245))
+rightfootVertices.append(Point(x: 25, y: 240))
+rightfootVertices.append(Point(x: 31, y: 236))
+rightfootVertices.append(Point(x: 38, y: 227))
+rightfootVertices.append(Point(x: 42, y: 220))
+rightfootVertices.append(Point(x: 46.5, y: 200))
+rightfootVertices.append(Point(x: 47.5, y: 188))
+rightfootVertices.append(Point(x: 48, y: 175))
+rightfootVertices.append(Point(x: 46, y: 146))
+rightfootVertices.append(Point(x: 43, y: 122))
+rightfootVertices.append(Point(x: 40, y: 110))
+rightfootVertices.append(Point(x: 35, y: 89))
+rightfootVertices.append(Point(x: 32, y: 80))
+rightfootVertices.append(Point(x: 25, y: 65))
+rightfootVertices.append(Point(x: 23, y: 61))
+rightfootVertices.append(Point(x: 19, y: 55))
+rightfootVertices.append(Point(x: 14, y: 48))
+rightfootVertices.append(Point(x: 8, y: 44))
+rightfootVertices.append(Point(x: 0, y: 42))
+canvas.drawCustomShape(with: rightfootVertices)
+
+//cover lines of right foot
+//set border
+canvas.drawShapesWithBorders = false
+
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
+
+//an oval
+canvas.drawEllipse(at: Point(x: 1, y: 100), width: 30, height: 110)
+
+//another oval
+canvas.drawEllipse(at: Point(x: -21, y: 175), width: 50, height: 110)
+
+
 
 //rotate back
 //canvas.rotate(by: -70)
 
 //translate axes back to the middle
 //canvas.translate(to: Point(x: 325, y: 0))
+
+//show axes
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
 
 
 /*:
