@@ -225,10 +225,10 @@ canvas.defaultLineWidth = 3
 //canvas.drawAxes(withScale: true, by: 50)
 
 //first curve
-canvas.drawCurve(from: Point(x: -25, y: 461), to: Point(x: -15, y: 480), control1: Point(x: -24, y: 470), control2: Point(x: -17, y: 480),showControlPoints: false)
+canvas.drawCurve(from: Point(x: -27, y: 461), to: Point(x: -17, y: 480), control1: Point(x: -26, y: 480), control2: Point(x: -17, y: 480),showControlPoints: false)
 
 //second curve
-canvas.drawCurve(from: Point(x: -15, y: 480), to: Point(x: -15, y: 472), control1: Point(x: -15, y: 480), control2: Point(x: -15, y: 472))
+canvas.drawCurve(from: Point(x: -17, y: 480), to: Point(x: -15, y: 472), control1: Point(x: -19, y: 475), control2: Point(x: -15, y: 472))
 
 //third curve
 canvas.drawCurve(from: Point(x: -15, y: 472), to: Point(x: 0, y: 495), control1: Point(x: -7, y: 490), control2: Point(x: 0, y: 495))
@@ -243,7 +243,7 @@ canvas.drawCurve(from: Point(x: 1, y: 475), to: Point(x: 5, y: 477), control1: P
 canvas.drawCurve(from: Point(x: 5, y: 477), to: Point(x: 29, y: 460), control1: Point(x: 5, y: 477), control2: Point(x: 12, y: 460))
 
 //seventh curve (left)
-canvas.drawCurve(from: Point(x: -35, y: 461), to: Point(x: -23, y: 470), control1: Point(x: -35, y: 461), control2: Point(x: -29, y: 464))
+canvas.drawCurve(from: Point(x: -35, y: 460), to: Point(x: -23, y: 475), control1: Point(x: -27, y: 461), control2: Point(x: -23, y: 475))
 
 //cover lines of fur
 //set border
@@ -259,13 +259,7 @@ canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100
 canvas.drawEllipse(at: Point(x: -6, y: 458), width: 45, height: 21)
 
 //left oval
-canvas.drawEllipse(at: Point(x: -29, y: 454), width: 12, height: 15)
-
-//middle left oval
-canvas.drawEllipse(at: Point(x: -23.5, y: 458), width: 15, height: 15)
-
-//middle right oval
-canvas.drawEllipse(at: Point(x: -21, y: 462), width: 15, height: 12)
+canvas.drawEllipse(at: Point(x: -27, y: 453.5), width: 12, height: 12)
 
 //feet
 //translate axes to align the middle of left foot
@@ -478,8 +472,12 @@ canvas.translate(to: Point(x: -75, y: 140))
 canvas.rotate(by: -30)
 
 //show axes
-canvas.drawAxes()
+//canvas.drawAxes()
 //canvas.drawAxes(withScale: true, by: 50)
+
+//left curves from top to bottom
+//canvas.drawCurve(from: Point(x: 0, y: 0), to: Point(x: 0, y: 0), control1: Point(x: 0, y: 0), control2: Point(x: 0, y: 0))
+
 
 //hands
 //rotate
