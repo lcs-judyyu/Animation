@@ -122,42 +122,96 @@ canvas.borderColor = Color.black
 canvas.drawShapesWithFill = false
 
 //show axes
-canvas.drawAxes()
-canvas.drawAxes(withScale: true, by: 25)
-
-//eyes
-//left eye
-canvas.drawEllipse(at: Point(x: -52, y: 370), width: 9, height: 30, borderWidth: 4)
-
-//right eye
-canvas.drawEllipse(at: Point(x: 52, y: 370), width: 9, height: 30, borderWidth: 4)
-
-//eyebrow
-//left
-canvas.drawCurve(from: Point(x: -12, y: 350), to: Point(x: -125, y: 367), control1: Point(x: -25, y: 450), control2: Point(x: -100, y: 375))
-
-//nose
-canvas.defaultBorderWidth = 6
-var noseVertices: [Point] = []
-noseVertices.append(Point(x: 0, y: 330))
-noseVertices.append(Point(x: -12, y: 350))
-noseVertices.append(Point(x: 12, y: 350))
-noseVertices.append(Point(x: 0, y: 330))
-canvas.drawCustomShape(with: noseVertices)
-
-//fur
-//show axes
 //canvas.drawAxes()
 //canvas.drawAxes(withScale: true, by: 25)
 
+//eyes
+//left eye
+canvas.drawEllipse(at: Point(x: -47, y: 370), width: 9, height: 30, borderWidth: 3)
+
+//right eye
+canvas.drawEllipse(at: Point(x: 47, y: 370), width: 9, height: 30, borderWidth: 3)
+
+//eyebrow
+canvas.defaultLineWidth = 2
+//left
+canvas.drawCurve(from: Point(x: -12, y: 350), to: Point(x: -125, y: 360), control1: Point(x: -10, y: 460), control2: Point(x: -100, y: 400),showControlPoints: false)
+//right
+canvas.drawCurve(from: Point(x: 12, y: 350), to: Point(x: 125, y: 360), control1: Point(x: 10, y: 460), control2: Point(x: 100, y: 400),showControlPoints: false)
+
+//set fill
+canvas.drawShapesWithFill = false
+
+//nose
+//set border
+canvas.defaultBorderWidth = 4
+
+var noseVertices: [Point] = []
+noseVertices.append(Point(x: -4, y: 330))
+noseVertices.append(Point(x: -11, y: 342))
+noseVertices.append(Point(x: -14, y: 350))
+noseVertices.append(Point(x: 14, y: 350))
+noseVertices.append(Point(x: 11, y: 342))
+noseVertices.append(Point(x: 4, y: 330))
+noseVertices.append(Point(x: 0, y: 327))
+noseVertices.append(Point(x: -4, y: 330))
+canvas.drawCustomShape(with: noseVertices)
+
+//blush
+//left
+canvas.drawEllipse(at: Point(x: -60, y: 335), width: 30, height: 15, borderWidth: 2)
+
+//right
+canvas.drawEllipse(at: Point(x: 60, y: 335), width: 30, height: 15, borderWidth: 2)
+
+//mouth
+//left
+canvas.drawCurve(from: Point(x: -7, y: 336), to: Point(x: -35, y: 310), control1: Point(x: -2, y: 305), control2: Point(x: -25, y: 290),showControlPoints: false)
+//right
+canvas.drawCurve(from: Point(x: 7, y: 336), to: Point(x: 35, y: 310), control1: Point(x: 2, y: 305), control2: Point(x: 25, y: 290),showControlPoints: false)
+
+//fur
+canvas.defaultLineWidth = 3
+//show axes
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
+
 //first curve
-//canvas.drawCurve(from: Point(x: -25, y: 460), to: Point(x: -20, y: 475), control1: Point(x: -25, y: 500), control2: Point(x: 0, y: 500))
+canvas.drawCurve(from: Point(x: -25, y: 461), to: Point(x: -15, y: 480), control1: Point(x: -24, y: 470), control2: Point(x: -17, y: 480),showControlPoints: false)
 
 //second curve
-//canvas.drawCurve(from: Point(x: -25, y: 460), to: Point(x: -20, y: 475), control1: Point(x: -25, y: 500), control2: Point(x: 0, y: 500))
+canvas.drawCurve(from: Point(x: -15, y: 480), to: Point(x: -15, y: 472), control1: Point(x: -15, y: 480), control2: Point(x: -15, y: 472))
 
 //third curve
-//canvas.drawCurve(from: Point(x: -20, y: 475), to: Point(x: -13, y: 470), control1: Point(x: -25, y: 500), control2: Point(x: 0, y: 500))
+canvas.drawCurve(from: Point(x: -15, y: 472), to: Point(x: 0, y: 495), control1: Point(x: -7, y: 490), control2: Point(x: 0, y: 495))
+
+//fourth curve
+canvas.drawCurve(from: Point(x: 0, y: 495), to: Point(x: 1, y: 475), control1: Point(x: -1, y: 480), control2: Point(x: 1, y: 475))
+
+//fifth curve
+canvas.drawCurve(from: Point(x: 1, y: 475), to: Point(x: 5, y: 477), control1: Point(x: 1, y: 475), control2: Point(x: 4, y: 482))
+
+//sixth curve
+canvas.drawCurve(from: Point(x: 5, y: 477), to: Point(x: 29, y: 460), control1: Point(x: 5, y: 477), control2: Point(x: 12, y: 460))
+
+//seventh curve (left)
+canvas.drawCurve(from: Point(x: -35, y: 461), to: Point(x: -23, y: 470), control1: Point(x: -35, y: 461), control2: Point(x: -29, y: 464))
+
+//cover lines of fur
+//set border
+canvas.drawShapesWithBorders = false
+
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
+
+//an oval
+canvas.drawEllipse(at: Point(x: -8, y: 458), width: 49, height: 21)
+
+
+
 
 //feet
 //translate axes to align the middle of left foot
