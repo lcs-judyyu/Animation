@@ -43,8 +43,8 @@ PlaygroundPage.current.liveView = canvas
 canvas.translate(to: Point(x: 325, y: 0))
 
 //show axes
-canvas.drawAxes()
-canvas.drawAxes(withScale: true, by: 25)
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 25)
 
 //set border
 canvas.drawShapesWithBorders = true
@@ -207,8 +207,17 @@ canvas.drawShapesWithFill = true
 //set color
 canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
 
-//an oval
-canvas.drawEllipse(at: Point(x: -8, y: 458), width: 49, height: 21)
+//right oval
+canvas.drawEllipse(at: Point(x: -6, y: 458), width: 45, height: 21)
+
+//left oval
+canvas.drawEllipse(at: Point(x: -29, y: 454), width: 12, height: 15)
+
+//middle left oval
+canvas.drawEllipse(at: Point(x: -23.5, y: 458), width: 15, height: 15)
+
+//middle right oval
+canvas.drawEllipse(at: Point(x: -21, y: 462), width: 15, height: 12)
 
 //feet
 //translate axes to align the middle of left foot
@@ -294,18 +303,33 @@ canvas.drawEllipse(at: Point(x: 21, y: 175), width: 50, height: 110)
 //set border
 canvas.drawShapesWithBorders = true
 canvas.borderColor = Color.black
-canvas.defaultBorderWidth = 8
+canvas.defaultBorderWidth = 2
 
 //set fill
 canvas.drawShapesWithFill = false
+
+//top middle
+canvas.drawEllipse(at: Point(x: 0, y: 225), width: 20, height: 33)
+
+//top left
+canvas.drawEllipse(at: Point(x: -25, y: 210), width: 15, height: 25)
+
+//top right
+canvas.drawEllipse(at: Point(x: 25, y: 210), width: 15, height: 25)
+
+//bottom
+canvas.drawEllipse(at: Point(x: 0, y: 105), width: 50, height: 83)
 
 //right foot
 //rotate
 canvas.rotate(by: -140)
 
 //show axes
-canvas.drawAxes()
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
+
+//set border
+canvas.defaultBorderWidth = 8
 
 var rightfootVertices: [Point] = []
 rightfootVertices.append(Point(x: 0, y: 42))
@@ -367,17 +391,36 @@ canvas.drawEllipse(at: Point(x: 1, y: 100), width: 30, height: 110)
 //another oval
 canvas.drawEllipse(at: Point(x: -21, y: 175), width: 50, height: 110)
 
+//circles in right foot
+//set border
+canvas.drawShapesWithBorders = true
+canvas.borderColor = Color.black
+canvas.defaultBorderWidth = 2
 
+//set fill
+canvas.drawShapesWithFill = false
+
+//top middle
+canvas.drawEllipse(at: Point(x: 0, y: 225), width: 20, height: 33)
+
+//top left
+canvas.drawEllipse(at: Point(x: -25, y: 210), width: 15, height: 25)
+
+//top right
+canvas.drawEllipse(at: Point(x: 25, y: 210), width: 15, height: 25)
+
+//bottom
+canvas.drawEllipse(at: Point(x: 0, y: 105), width: 50, height: 83)
 
 //rotate back
-//canvas.rotate(by: -70)
+canvas.rotate(by: 70)
 
 //translate axes back to the middle
-//canvas.translate(to: Point(x: 325, y: 0))
+canvas.translate(to: Point(x: 0, y: -50))
 
 //show axes
-//canvas.drawAxes()
-//canvas.drawAxes(withScale: true, by: 50)
+canvas.drawAxes()
+canvas.drawAxes(withScale: true, by: 50)
 
 
 /*:
