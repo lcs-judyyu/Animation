@@ -470,7 +470,23 @@ canvas.translate(to: Point(x: 0, y: -50))
 canvas.drawAxes()
 canvas.drawAxes(withScale: true, by: 50)
 
+//carrot
+//translate axes to align the middle of carrot
+canvas.translate(to: Point(x: -75, y: 140))
+
+//rotate
+canvas.rotate(by: -30)
+
+//show axes
+canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
+
 //hands
+//rotate
+//canvas.rotate(by: 140)
+
+//translate axes to align the middle of left hand
+//canvas.translate(to: Point(x: -75, y: 140))
 
 
 
