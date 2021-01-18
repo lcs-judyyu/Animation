@@ -20,6 +20,9 @@ import CanvasGraphics
 // Create canvas
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
+//zoom
+//let canvas = Canvas(width: preferredWidth, height: preferredHeight, quality: .High)
+
 // Create a turtle that will draw upon the canvas
 let turtle = Tortoise(drawingUpon: canvas)
 
@@ -121,7 +124,14 @@ canvas.rotate(by: 30)
 
 //big circle
 canvas.drawEllipse(at: Point(x: 150, y: 520), width: 95, height: 220, borderWidth: 4)
-//small ear
+
+//small circle
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.black
+
 canvas.drawEllipse(at: Point(x: 150, y: 460), width: 40, height: 100, borderWidth: 4)
 
 //right ear
@@ -133,8 +143,18 @@ canvas.rotate(by: -60)
 //canvas.drawAxes(withScale: true, by: 50)
 
 //big circle
+//set fill
+canvas.drawShapesWithFill = false
+
 canvas.drawEllipse(at: Point(x: -150, y: 520), width: 95, height: 220, borderWidth: 4)
-//small ear
+
+//small circle
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.black
+
 canvas.drawEllipse(at: Point(x: -150, y: 460), width: 40, height: 100, borderWidth: 4)
 
 //rotate
@@ -174,6 +194,12 @@ canvas.drawShapesWithFill = false
 //canvas.drawAxes(withScale: true, by: 25)
 
 //eyes
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.black
+
 //left eye
 canvas.drawEllipse(at: Point(x: -47, y: 370), width: 9, height: 30, borderWidth: 3)
 
@@ -194,6 +220,12 @@ canvas.drawShapesWithFill = false
 //set border
 canvas.defaultBorderWidth = 4
 
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.black
+
 var noseVertices: [Point] = []
 noseVertices.append(Point(x: -4, y: 330))
 noseVertices.append(Point(x: -11, y: 342))
@@ -206,6 +238,12 @@ noseVertices.append(Point(x: -4, y: 330))
 canvas.drawCustomShape(with: noseVertices)
 
 //blush
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 0, alpha: 50)
+
 //left
 canvas.drawEllipse(at: Point(x: -60, y: 335), width: 30, height: 15, borderWidth: 2)
 
@@ -348,7 +386,10 @@ canvas.borderColor = Color.black
 canvas.defaultBorderWidth = 2
 
 //set fill
-canvas.drawShapesWithFill = false
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.black
 
 //top middle
 canvas.drawEllipse(at: Point(x: 0, y: 225), width: 20, height: 33)
@@ -372,6 +413,9 @@ canvas.rotate(by: -140)
 
 //set border
 canvas.defaultBorderWidth = 8
+
+//set fill
+canvas.drawShapesWithFill = false
 
 var rightfootVertices: [Point] = []
 rightfootVertices.append(Point(x: 0, y: 42))
@@ -440,7 +484,10 @@ canvas.borderColor = Color.black
 canvas.defaultBorderWidth = 2
 
 //set fill
-canvas.drawShapesWithFill = false
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.black
 
 //top middle
 canvas.drawEllipse(at: Point(x: 0, y: 225), width: 20, height: 33)
