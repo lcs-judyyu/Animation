@@ -519,8 +519,8 @@ canvas.translate(to: Point(x: -75, y: 140))
 canvas.rotate(by: -30)
 
 //show axes
-//canvas.drawAxes()
-//canvas.drawAxes(withScale: true, by: 50)
+canvas.drawAxes()
+canvas.drawAxes(withScale: true, by: 50)
 
 //left curves from top to bottom
 //canvas.drawCurve(from: Point(x: 0, y: 0), to: Point(x: 0, y: 0), control1: Point(x: 0, y: 0), control2: Point(x: 0, y: 0))
