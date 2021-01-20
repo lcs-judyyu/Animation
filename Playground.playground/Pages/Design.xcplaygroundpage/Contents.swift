@@ -508,30 +508,100 @@ canvas.rotate(by: 70)
 canvas.translate(to: Point(x: 0, y: -50))
 
 //show axes
-canvas.drawAxes()
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
 
 //carrot
 //translate axes to align the middle of carrot
-canvas.translate(to: Point(x: -75, y: 140))
+canvas.translate(to: Point(x: -75, y: 125))
 
 //rotate
 canvas.rotate(by: -30)
 
 //show axes
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
+
+//botton curve
+canvas.drawCurve(from: Point(x: -25, y: 145), to: Point(x: 25, y: 145), control1: Point(x: -15, y: 40), control2: Point(x: 15, y: 40),showControlPoints: false)
+
+//top curve
+canvas.drawCurve(from: Point(x: -25, y: 145), to: Point(x: 25, y: 145), control1: Point(x: -20, y: 170), control2: Point(x: 20, y: 170),showControlPoints: false)
+
+//inner curves
+canvas.defaultLineWidth = 2
+
+//left 1
+canvas.drawCurve(from: Point(x: -23, y: 126), to: Point(x: -13, y: 120), control1: Point(x: -23, y: 126), control2: Point(x: -20, y: 120))
+
+//left 2
+canvas.drawCurve(from: Point(x: -21, y: 115), to: Point(x: -13, y: 111), control1: Point(x: -21, y: 115), control2: Point(x: -17, y: 111))
+
+//left 3
+canvas.drawCurve(from: Point(x: -17, y: 95), to: Point(x: -4, y: 89), control1: Point(x: -17, y: 95), control2: Point(x: -12, y: 89))
+
+//triangles and lines
+//set border
+canvas.drawShapesWithBorders = true
+canvas.defaultBorderWidth = 4
+
+//set fill
+canvas.drawShapesWithFill = false
+
+//carrot 1
+var carrot1Vertices: [Point] = []
+carrot1Vertices.append(Point(x: -10, y: 160))
+carrot1Vertices.append(Point(x: -15, y: 185))
+carrot1Vertices.append(Point(x: -5, y: 185))
+carrot1Vertices.append(Point(x: -5, y: 160))
+carrot1Vertices.append(Point(x: -10, y: 160))
+canvas.drawCustomShape(with: carrot1Vertices)
+
+//set line width
+canvas.defaultLineWidth = 2
+
+//carrot 2
+canvas.drawLine(from: Point(x: -16, y: 157), to: Point(x: -22, y: 195))
+canvas.drawLine(from: Point(x: -22, y: 195), to: Point(x: -8, y: 195))
+canvas.drawLine(from: Point(x: -8, y: 195), to: Point(x: -9, y: 185))
+
+//carrot 3
+canvas.drawLine(from: Point(x: -8, y: 190), to: Point(x: 5, y: 194))
+canvas.drawLine(from: Point(x: 5, y: 194), to: Point(x: 4, y: 160))
+
+//carrot 4
+canvas.drawLine(from: Point(x: 5, y: 184), to: Point(x: 12, y: 184))
+canvas.drawLine(from: Point(x: 12, y: 184), to: Point(x: 9, y: 160))
+
+//cover lines with circle
+//set border
+canvas.drawShapesWithBorders = false
+
+//set fill
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
+
+canvas.drawEllipse(at: Point(x: 0, y: 147), width: 45, height: 30)
+
+//hands
+//rotate back to middle
+canvas.rotate(by: 30)
+
+//translate axes to the middle
+canvas.translate(to: Point(x: 75, y: -125))
+
+//translate axes to align the middle of right hand
+canvas.translate(to: Point(x: 0, y: 230))
+
+//rotate
+canvas.rotate(by: -80)
+
+//show axes
 canvas.drawAxes()
 canvas.drawAxes(withScale: true, by: 50)
 
-//left curves from top to bottom
-//canvas.drawCurve(from: Point(x: 0, y: 0), to: Point(x: 0, y: 0), control1: Point(x: 0, y: 0), control2: Point(x: 0, y: 0))
-
-
-//hands
-//rotate
-//canvas.rotate(by: 140)
-
-//translate axes to align the middle of left hand
-//canvas.translate(to: Point(x: -75, y: 140))
 
 
 
