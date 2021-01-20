@@ -111,7 +111,7 @@ canvas.drawShapesWithFill = false
 //bottom circle
 canvas.drawEllipse(at: Point(x: 0, y: 160), width: 325, height: 200, borderWidth: 4)
 //topcircle
-canvas.drawEllipse(at: Point(x: 0, y: 250), width: 210, height: 140, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 0, y: 245), width: 240, height: 140, borderWidth: 4)
 
 //ears
 //left ear
@@ -531,14 +531,14 @@ canvas.drawCurve(from: Point(x: -25, y: 145), to: Point(x: 25, y: 145), control1
 //inner curves
 canvas.defaultLineWidth = 2
 
-//left 1
-canvas.drawCurve(from: Point(x: -23, y: 126), to: Point(x: -13, y: 120), control1: Point(x: -23, y: 126), control2: Point(x: -20, y: 120))
+//right 1
+canvas.drawCurve(from: Point(x: 23, y: 126), to: Point(x: 13, y: 120), control1: Point(x: 23, y: 126), control2: Point(x: 20, y: 120))
 
-//left 2
-canvas.drawCurve(from: Point(x: -21, y: 115), to: Point(x: -13, y: 111), control1: Point(x: -21, y: 115), control2: Point(x: -17, y: 111))
+//right 2
+canvas.drawCurve(from: Point(x: 21, y: 115), to: Point(x: 13, y: 111), control1: Point(x: 21, y: 115), control2: Point(x: 17, y: 111))
 
-//left 3
-canvas.drawCurve(from: Point(x: -17, y: 95), to: Point(x: -4, y: 89), control1: Point(x: -17, y: 95), control2: Point(x: -12, y: 89))
+//right 3
+canvas.drawCurve(from: Point(x: 17, y: 95), to: Point(x: 4, y: 89), control1: Point(x: 17, y: 95), control2: Point(x: 12, y: 89))
 
 //triangles and lines
 //set border
@@ -593,7 +593,7 @@ canvas.rotate(by: 30)
 canvas.translate(to: Point(x: 75, y: -125))
 
 //translate axes to align the middle of right hand
-canvas.translate(to: Point(x: 0, y: 230))
+canvas.translate(to: Point(x: 0, y: 220))
 
 //rotate
 canvas.rotate(by: -80)
@@ -602,6 +602,7 @@ canvas.rotate(by: -80)
 canvas.drawAxes()
 canvas.drawAxes(withScale: true, by: 50)
 
+//right hand
 
 
 
