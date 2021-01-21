@@ -47,7 +47,7 @@ canvas.translate(to: Point(x: 325, y: 0))
 
 //show axes
 //canvas.drawAxes()
-//canvas.drawAxes(withScale: true, by: 25)
+//canvas.drawAxes(withScale: true, by: 50)
 
 //set border
 canvas.drawShapesWithBorders = true
@@ -111,7 +111,7 @@ canvas.drawShapesWithFill = false
 //bottom circle
 canvas.drawEllipse(at: Point(x: 0, y: 160), width: 325, height: 200, borderWidth: 4)
 //top circle
-canvas.drawEllipse(at: Point(x: 0, y: 240), width: 265, height: 140, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 0, y: 237), width: 277, height: 140, borderWidth: 4)
 
 //ears
 //left ear
@@ -132,7 +132,7 @@ canvas.drawShapesWithFill = true
 //set color
 canvas.fillColor = Color.black
 
-canvas.drawEllipse(at: Point(x: 150, y: 460), width: 40, height: 100, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 150, y: 467), width: 40, height: 100, borderWidth: 4)
 
 //right ear
 //rotate
@@ -155,7 +155,7 @@ canvas.drawShapesWithFill = true
 //set color
 canvas.fillColor = Color.black
 
-canvas.drawEllipse(at: Point(x: -150, y: 460), width: 40, height: 100, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: -150, y: 467), width: 40, height: 100, borderWidth: 4)
 
 //rotate
 canvas.rotate(by: 30)
@@ -168,16 +168,18 @@ canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
 
 //set color
-canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 90)
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
 
 //rectangle in bottom middle
 canvas.drawRectangle(at: Point(x: -80, y: 150), width: 160, height: 200)
 
 //two rectangle for head and body
 //left
-canvas.drawRectangle(at: Point(x: -140, y: 150), width: 60, height: 110)
+canvas.drawRectangle(at: Point(x: -132, y: 150), width: 60, height: 108)
 //right
-canvas.drawRectangle(at: Point(x: 75, y: 150), width: 60, height: 100)
+canvas.drawRectangle(at: Point(x: 75, y: 150), width: 57, height: 100)
+//middle right
+canvas.drawRectangle(at: Point(x: 100, y: 218), width: 57, height: 60)
 
 //cover lines of ears
 canvas.drawEllipse(at: Point(x: 0, y: 368), width: 245, height: 185)
@@ -189,9 +191,30 @@ canvas.borderColor = Color.black
 //set fill
 canvas.drawShapesWithFill = false
 
+
+
+
+//grey circle
+//set fill
+canvas.drawShapesWithFill = true
+
+//set border
+canvas.drawShapesWithBorders = false
+
+//set color
+canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 0, alpha: 50)
+
+canvas.drawEllipse(at: Point(x: 0, y: 120), width: 220, height: 10)
+
+
+
+
 //show axes
 //canvas.drawAxes()
 //canvas.drawAxes(withScale: true, by: 25)
+
+//set border
+canvas.drawShapesWithBorders = true
 
 //eyes
 //set fill
@@ -313,10 +336,13 @@ canvas.rotate(by: 70)
 //set border
 canvas.drawShapesWithBorders = true
 canvas.borderColor = Color.black
-canvas.defaultBorderWidth = 8
+canvas.defaultBorderWidth = 15
 
 //set fill
-canvas.drawShapesWithFill = false
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
 
 //left foot
 var leftfootVertices: [Point] = []
@@ -412,10 +438,13 @@ canvas.rotate(by: -140)
 //canvas.drawAxes(withScale: true, by: 50)
 
 //set border
-canvas.defaultBorderWidth = 8
+canvas.defaultBorderWidth = 15
 
 //set fill
-canvas.drawShapesWithFill = false
+canvas.drawShapesWithFill = true
+
+//set color
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
 
 var rightfootVertices: [Point] = []
 rightfootVertices.append(Point(x: 0, y: 42))
@@ -600,7 +629,7 @@ canvas.rotate(by: -80)
 
 //show axes
 //canvas.drawAxes()
-//canvas.drawAxes(withScale: true, by: 25)
+//canvas.drawAxes(withScale: true, by: 50)
 
 //right hand
 //set line width
@@ -611,7 +640,7 @@ canvas.drawCurve(from: Point(x: 10, y: 5), to: Point(x: 0, y: 127), control1: Po
 //bottom
 canvas.drawCurve(from: Point(x: 10, y: 5), to: Point(x: 31, y: 120), control1: Point(x: 25, y: 17), control2: Point(x: 45, y: 100))
 //right
-canvas.drawCurve(from: Point(x: 31, y: 120), to: Point(x: -38, y: 119), control1: Point(x: 12, y: 150), control2: Point(x: -14, y: 150))
+canvas.drawCurve(from: Point(x: 31, y: 120), to: Point(x: -38, y: 120), control1: Point(x: 12, y: 150), control2: Point(x: -14, y: 150))
 
 //cover lines of right hand
 //set border
@@ -621,13 +650,16 @@ canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
 
 //set color
-canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 80)
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
 
 //an oval
 canvas.drawEllipse(at: Point(x: -5, y: 100), width: 60, height: 70)
 
+//cover carrot line
+canvas.drawEllipse(at: Point(x: 2, y: 23), width: 25, height: 31)
+
 //a curve
-canvas.drawCurve(from: Point(x: -23, y: 73), to: Point(x: -17, y: 105), control1: Point(x: -25, y: 75), control2: Point(x: -17, y: 105))
+canvas.drawCurve(from: Point(x: -23, y: 72), to: Point(x: -17, y: 105), control1: Point(x: -23, y: 79), control2: Point(x: -17, y: 105))
 
 //left hand
 //rotate back to middle
@@ -637,25 +669,26 @@ canvas.rotate(by: 80)
 canvas.translate(to: Point(x: 0, y: -225))
 
 //translate axes to align the middle of right hand
-canvas.translate(to: Point(x: -25, y: 225))
+canvas.translate(to: Point(x: -10, y: 230))
 
 //rotate
-canvas.rotate(by: 80)
+canvas.rotate(by: 78)
 
 //show axes
-canvas.drawAxes()
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes()
+//canvas.drawAxes(withScale: true, by: 50)
 
 //set line width
 canvas.defaultLineWidth = 4
 
 //top
-//canvas.drawCurve(from: Point(x: 10, y: 5), to: Point(x: 0, y: 127), control1: Point(x: -30, y: -10), control2: Point(x: -35, y: 150))
+canvas.drawCurve(from: Point(x: -10, y: 5), to: Point(x: 0, y: 127), control1: Point(x: 30, y: -10), control2: Point(x: 35, y: 150))
 //bottom
-//canvas.drawCurve(from: Point(x: 10, y: 5), to: Point(x: 31, y: 120), control1: Point(x: 25, y: 17), control2: Point(x: 45, y: 100),showControlPoints: false)
-//right
-//canvas.drawCurve(from: Point(x: 31, y: 120), to: Point(x: -37, y: 115), control1: Point(x: 12, y: 150), control2: Point(x: -14, y: 150),showControlPoints: false)
-//cover lines of right hand
+canvas.drawCurve(from: Point(x: -10, y: 5), to: Point(x: -31, y: 120), control1: Point(x: -25, y: 17), control2: Point(x: -45, y: 100))
+//left
+canvas.drawCurve(from: Point(x: -31, y: 120), to: Point(x: 38, y: 105), control1: Point(x: -12, y: 150), control2: Point(x: 14, y: 150))
+
+//cover lines of left hand
 //set border
 canvas.drawShapesWithBorders = false
 
@@ -663,16 +696,24 @@ canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
 
 //set color
-canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 80)
+canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
 
-//an oval
-//canvas.drawEllipse(at: Point(x: -5, y: 100), width: 60, height: 70)
+//right oval
+canvas.drawEllipse(at: Point(x: 6, y: 98), width: 54, height: 70)
+//left
+canvas.drawEllipse(at: Point(x: -12, y: 102), width: 40, height: 60)
+
+//two small circles
+//left
+canvas.drawEllipse(at: Point(x: -1, y: 130), width: 20, height: 18)
+//right
+canvas.drawEllipse(at: Point(x: 27, y: 102), width: 15, height: 25)
+
+//cover carrot line
+canvas.drawEllipse(at: Point(x: -3, y: 32), width: 37, height: 25)
 
 //a curve
-//canvas.drawCurve(from: Point(x: -31, y: 80), to: Point(x: -17, y: 105), control1: Point(x: -34, y: 88), control2: Point(x: -17, y: 105),showControlPoints: true)
-
-
-
+canvas.drawCurve(from: Point(x: 23, y: 67), to: Point(x: 17, y: 105), control1: Point(x: 25, y: 75), control2: Point(x: 17, y: 105))
 /*:
  ## Show the Live View
  Don't see any results?

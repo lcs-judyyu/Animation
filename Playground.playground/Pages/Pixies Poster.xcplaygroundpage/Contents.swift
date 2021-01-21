@@ -55,13 +55,39 @@ let limeGreen = Color(hue: 106,
 
 //background
 //set color
-canvas.fillColor = Color.init(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+canvas.fillColor = Color.init(hue: 106,
+                              saturation: 64,
+                              brightness: 73,
+                              alpha: 100)
 
 canvas.drawRectangle(at: Point(x: 0, y: 0),
                      width: preferredWidth,
                      height: preferredHeight)
 
+//black
+canvas.fillColor = Color.black
+canvas.drawRectangle(at: Point(x: 0, y: 0),
+                     width: preferredWidth,
+                     height: 400)
 
+for x in stride(from: 0,
+                through: 400,
+                by: 40){
+    for y in stride(from: 0, through: 400, by: 40){
+        canvas.fillColor = Color.init(hue: 106,
+                                      saturation: 64,
+                                      brightness: 73,
+                                      alpha: 100)
+        canvas.drawEllipse(at: Point(x: x,
+                                     y: y), width: 36, height: 36)
+    }
+}
+
+canvas.drawAxes(withScale: true,
+                by: 50)
+
+
+canvas.drawText(message: "pixies", at: Point(x: 15, y: 425), size: 55, kerning: 1)
 
 
 
