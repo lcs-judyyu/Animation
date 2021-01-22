@@ -37,8 +37,7 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawAxes(withScale: true,
-                by: 50)
+//canvas.drawAxes(withScale: true, by: 50)
 
 canvas.drawShapesWithFill = true
 canvas.drawShapesWithBorders = false
@@ -74,20 +73,77 @@ for x in stride(from: 0,
                 through: 400,
                 by: 40){
     for y in stride(from: 0, through: 400, by: 40){
-        canvas.fillColor = Color.init(hue: 106,
-                                      saturation: 64,
-                                      brightness: 73,
-                                      alpha: 100)
+        if 80 <= x + y, x + y <= 400, x != 0, y != 0 {
+            canvas.fillColor = Color.init(hue: 81,
+                                          saturation: 5,
+                                          brightness: 88,
+                                          alpha: 100)}
+            else {canvas.fillColor = Color.init(hue: 106,
+                                           saturation: 64,
+                                           brightness: 73,
+                                           alpha: 100)}
+
         canvas.drawEllipse(at: Point(x: x,
                                      y: y), width: 36, height: 36)
     }
 }
 
-canvas.drawAxes(withScale: true,
-                by: 50)
+//canvas.drawAxes(withScale: true, by: 50)
 
+canvas.drawText(message: "pixies",
+                at: Point(x: 15, y: 410),
+                size: 67,
+                kerning: 1.5)
 
-canvas.drawText(message: "pixies", at: Point(x: 15, y: 425), size: 55, kerning: 1)
+canvas.drawText(message: "saturday",
+                at: Point(x: 15, y: 550),
+                size: 10,
+                kerning: 0)
+
+canvas.drawText(message: "december 13 1986",
+                at: Point(x: 15, y: 533),
+                size: 10,
+                kerning: 0)
+
+canvas.drawText(message: "9 pm over 21",
+                at: Point(x: 15, y: 517),
+                size: 10,
+                kerning: 0)
+
+canvas.drawText(message: "at the rat",
+                at: Point(x: 280, y: 550),
+                size: 10,
+                kerning: 0)
+
+canvas.drawText(message: "528 commonwealth",
+                at: Point(x: 280, y: 533),
+                size: 10,
+                kerning: 0)
+
+canvas.drawText(message: "boston, mass",
+                at: Point(x: 280, y: 517),
+                size: 10,
+                kerning: 0)
+
+canvas.textColor = Color(hue: 81,
+                         saturation: 5,
+                         brightness: 88,
+                         alpha: 100)
+
+canvas.drawText(message: "with",
+                at: Point(x: 280, y: 455),
+                size: 12,
+                kerning: 0.5)
+
+canvas.drawText(message: "throwing muses",
+                at: Point(x: 280, y: 438),
+                size: 12,
+                kerning: 0.5)
+
+canvas.drawText(message: "big dipper",
+                at: Point(x: 280, y: 422),
+                size: 12,
+                kerning: 0.5)
 
 
 

@@ -52,12 +52,13 @@ canvas.translate(to: Point(x: 325, y: 0))
 //set border
 canvas.drawShapesWithBorders = true
 canvas.borderColor = Color.black
+canvas.defaultBorderWidth = 5
 
 //set fill
 canvas.drawShapesWithFill = false
 
 //head
-canvas.drawEllipse(at: Point(x: 0, y: 368), width: 250, height: 190, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 0, y: 368), width: 250, height: 190)
 
 //tail
 //set border
@@ -67,7 +68,7 @@ canvas.borderColor = Color.black
 //set fill
 canvas.drawShapesWithFill = false
 
-canvas.drawEllipse(at: Point(x: 170, y: 180), width: 60, height: 60, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 170, y: 180), width: 55, height: 55)
 
 //draw circle around
 //set border
@@ -78,15 +79,15 @@ canvas.borderColor = Color.black
 canvas.drawShapesWithFill = false
 
 //circle from left to right, top to bottom
-canvas.drawEllipse(at: Point(x: 153, y: 205), width: 9, height: 9, borderWidth: 4)
-canvas.drawEllipse(at: Point(x: 160, y: 210), width: 10, height: 10, borderWidth: 4)
-canvas.drawEllipse(at: Point(x: 170, y: 212), width: 10, height: 10, borderWidth: 4)
-canvas.drawEllipse(at: Point(x: 181, y: 210), width: 8, height: 8, borderWidth: 4)
-canvas.drawEllipse(at: Point(x: 191, y: 203), width: 12, height: 12, borderWidth: 4)
-canvas.drawEllipse(at: Point(x: 198, y: 195), width: 9, height: 9, borderWidth: 4)
-canvas.drawEllipse(at: Point(x: 202, y: 186), width: 7, height: 7, borderWidth: 4)
-canvas.drawEllipse(at: Point(x: 201, y: 179), width: 9, height: 9, borderWidth: 4)
-canvas.drawEllipse(at: Point(x: 198, y: 169), width: 12, height: 12, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 153, y: 205), width: 9, height: 9)
+canvas.drawEllipse(at: Point(x: 160, y: 210), width: 10, height: 10)
+canvas.drawEllipse(at: Point(x: 170, y: 212), width: 10, height: 10)
+canvas.drawEllipse(at: Point(x: 181, y: 210), width: 8, height: 8)
+canvas.drawEllipse(at: Point(x: 191, y: 203), width: 12, height: 12)
+canvas.drawEllipse(at: Point(x: 198, y: 195), width: 9, height: 9)
+canvas.drawEllipse(at: Point(x: 202, y: 186), width: 7, height: 7)
+canvas.drawEllipse(at: Point(x: 201, y: 179), width: 9, height: 9)
+canvas.drawEllipse(at: Point(x: 198, y: 169), width: 12, height: 12)
 
 //cover lines of tail
 //set border
@@ -98,7 +99,7 @@ canvas.drawShapesWithFill = true
 //set color
 canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
 
-canvas.drawEllipse(at: Point(x: 170, y: 180), width: 65, height: 65)
+canvas.drawEllipse(at: Point(x: 170, y: 180), width: 64, height: 64)
 
 //body
 //set border
@@ -109,9 +110,9 @@ canvas.borderColor = Color.black
 canvas.drawShapesWithFill = false
 
 //bottom circle
-canvas.drawEllipse(at: Point(x: 0, y: 160), width: 325, height: 200, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 0, y: 160), width: 325, height: 200)
 //top circle
-canvas.drawEllipse(at: Point(x: 0, y: 237), width: 277, height: 140, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 0, y: 237), width: 277, height: 140)
 
 //ears
 //left ear
@@ -123,7 +124,7 @@ canvas.rotate(by: 30)
 //canvas.drawAxes(withScale: true, by: 50)
 
 //big circle
-canvas.drawEllipse(at: Point(x: 150, y: 520), width: 95, height: 220, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 150, y: 520), width: 95, height: 220)
 
 //small circle
 //set fill
@@ -132,7 +133,7 @@ canvas.drawShapesWithFill = true
 //set color
 canvas.fillColor = Color.black
 
-canvas.drawEllipse(at: Point(x: 150, y: 467), width: 40, height: 100, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: 150, y: 467), width: 40, height: 100)
 
 //right ear
 //rotate
@@ -146,7 +147,7 @@ canvas.rotate(by: -60)
 //set fill
 canvas.drawShapesWithFill = false
 
-canvas.drawEllipse(at: Point(x: -150, y: 520), width: 95, height: 220, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: -150, y: 520), width: 95, height: 220)
 
 //small circle
 //set fill
@@ -155,7 +156,7 @@ canvas.drawShapesWithFill = true
 //set color
 canvas.fillColor = Color.black
 
-canvas.drawEllipse(at: Point(x: -150, y: 467), width: 40, height: 100, borderWidth: 4)
+canvas.drawEllipse(at: Point(x: -150, y: 467), width: 40, height: 100)
 
 //rotate
 canvas.rotate(by: 30)
@@ -191,9 +192,6 @@ canvas.borderColor = Color.black
 //set fill
 canvas.drawShapesWithFill = false
 
-
-
-
 //grey circle
 //set fill
 canvas.drawShapesWithFill = true
@@ -204,10 +202,7 @@ canvas.drawShapesWithBorders = false
 //set color
 canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 0, alpha: 50)
 
-canvas.drawEllipse(at: Point(x: 0, y: 120), width: 220, height: 10)
-
-
-
+canvas.drawEllipse(at: Point(x: 0, y: 117), width: 220, height: 120)
 
 //show axes
 //canvas.drawAxes()
@@ -224,13 +219,13 @@ canvas.drawShapesWithFill = true
 canvas.fillColor = Color.black
 
 //left eye
-canvas.drawEllipse(at: Point(x: -47, y: 370), width: 9, height: 30, borderWidth: 3)
+canvas.drawEllipse(at: Point(x: -47, y: 370), width: 10, height: 30, borderWidth: 3)
 
 //right eye
-canvas.drawEllipse(at: Point(x: 47, y: 370), width: 9, height: 30, borderWidth: 3)
+canvas.drawEllipse(at: Point(x: 47, y: 370), width: 10, height: 30, borderWidth: 3)
 
 //eyebrow
-canvas.defaultLineWidth = 2
+canvas.defaultLineWidth = 3
 //left
 canvas.drawCurve(from: Point(x: -12, y: 350), to: Point(x: -125, y: 360), control1: Point(x: -10, y: 460), control2: Point(x: -100, y: 400),showControlPoints: false)
 //right
@@ -280,10 +275,7 @@ canvas.drawCurve(from: Point(x: -7, y: 336), to: Point(x: -35, y: 310), control1
 canvas.drawCurve(from: Point(x: 7, y: 336), to: Point(x: 35, y: 310), control1: Point(x: 2, y: 305), control2: Point(x: 25, y: 290),showControlPoints: false)
 
 //fur
-canvas.defaultLineWidth = 3
-//show axes
-//canvas.drawAxes()
-//canvas.drawAxes(withScale: true, by: 50)
+canvas.defaultLineWidth = 4
 
 //first curve
 canvas.drawCurve(from: Point(x: -27, y: 461), to: Point(x: -17, y: 480), control1: Point(x: -26, y: 480), control2: Point(x: -17, y: 480),showControlPoints: false)
@@ -572,7 +564,7 @@ canvas.drawCurve(from: Point(x: 17, y: 95), to: Point(x: 4, y: 89), control1: Po
 //triangles and lines
 //set border
 canvas.drawShapesWithBorders = true
-canvas.defaultBorderWidth = 4
+canvas.defaultBorderWidth = 3
 
 //set fill
 canvas.drawShapesWithFill = false
@@ -587,7 +579,7 @@ carrot1Vertices.append(Point(x: -10, y: 160))
 canvas.drawCustomShape(with: carrot1Vertices)
 
 //set line width
-canvas.defaultLineWidth = 2
+canvas.defaultLineWidth = 3
 
 //carrot 2
 canvas.drawLine(from: Point(x: -16, y: 157), to: Point(x: -22, y: 195))
@@ -633,7 +625,7 @@ canvas.rotate(by: -80)
 
 //right hand
 //set line width
-canvas.defaultLineWidth = 4
+canvas.defaultLineWidth = 5
 
 //top
 canvas.drawCurve(from: Point(x: 10, y: 5), to: Point(x: 0, y: 127), control1: Point(x: -30, y: -10), control2: Point(x: -35, y: 150))
@@ -679,7 +671,7 @@ canvas.rotate(by: 78)
 //canvas.drawAxes(withScale: true, by: 50)
 
 //set line width
-canvas.defaultLineWidth = 4
+canvas.defaultLineWidth = 5
 
 //top
 canvas.drawCurve(from: Point(x: -10, y: 5), to: Point(x: 0, y: 127), control1: Point(x: 30, y: -10), control2: Point(x: 35, y: 150))
