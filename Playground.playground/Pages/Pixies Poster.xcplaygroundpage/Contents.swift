@@ -88,7 +88,7 @@ for x in stride(from: 0,
     }
 }
 
-//canvas.drawAxes(withScale: true, by: 50)
+canvas.drawAxes(withScale: true, by: 50)
 
 canvas.drawText(message: "pixies",
                 at: Point(x: 15, y: 410),
@@ -106,7 +106,7 @@ canvas.drawText(message: "december 13 1986",
                 kerning: 0)
 
 canvas.drawText(message: "9 pm over 21",
-                at: Point(x: 15, y: 517),
+                at: Point(x: 15, y: 516),
                 size: 10,
                 kerning: 0)
 
@@ -121,7 +121,7 @@ canvas.drawText(message: "528 commonwealth",
                 kerning: 0)
 
 canvas.drawText(message: "boston, mass",
-                at: Point(x: 280, y: 517),
+                at: Point(x: 280, y: 516),
                 size: 10,
                 kerning: 0)
 
@@ -141,7 +141,7 @@ canvas.drawText(message: "throwing muses",
                 kerning: 0.5)
 
 canvas.drawText(message: "big dipper",
-                at: Point(x: 280, y: 422),
+                at: Point(x: 280, y: 421),
                 size: 12,
                 kerning: 0.5)
 
