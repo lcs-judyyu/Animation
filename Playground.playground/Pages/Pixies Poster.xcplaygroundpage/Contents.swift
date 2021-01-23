@@ -146,8 +146,6 @@ canvas.drawText(message: "big dipper",
                 kerning: 0.5)
 
 
-
-
 /*:
  ## Show the Live View
  Don't see any results?
