@@ -88,7 +88,7 @@ for x in stride(from: 0,
     }
 }
 
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes(withScale: true, by: 50)
 
 canvas.drawText(message: "pixies",
                 at: Point(x: 15, y: 410),
