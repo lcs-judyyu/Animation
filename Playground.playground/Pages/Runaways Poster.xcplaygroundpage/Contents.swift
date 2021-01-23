@@ -57,7 +57,7 @@ canvas.fillColor = Color.init(hue: 338,
 canvas.drawRectangle(at: Point(x: 0, y: 0),
                      width: preferredWidth, height: preferredHeight)
 
-canvas.drawAxes(withScale: true, by: 50)
+//canvas.drawAxes(withScale: true, by: 50)
 
 canvas.defaultLineWidth = 14
 
