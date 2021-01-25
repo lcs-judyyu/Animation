@@ -328,7 +328,7 @@ canvas.rotate(by: 70)
 //set border
 canvas.drawShapesWithBorders = true
 canvas.borderColor = Color.black
-canvas.defaultBorderWidth = 15
+canvas.defaultBorderWidth = 19
 
 //set fill
 canvas.drawShapesWithFill = true
@@ -430,7 +430,7 @@ canvas.rotate(by: -140)
 //canvas.drawAxes(withScale: true, by: 50)
 
 //set border
-canvas.defaultBorderWidth = 15
+canvas.defaultBorderWidth = 19
 
 //set fill
 canvas.drawShapesWithFill = true
@@ -564,7 +564,7 @@ canvas.drawCurve(from: Point(x: 17, y: 95), to: Point(x: 4, y: 89), control1: Po
 //triangles and lines
 //set border
 canvas.drawShapesWithBorders = true
-canvas.defaultBorderWidth = 3
+canvas.defaultBorderWidth = 6
 
 //set fill
 canvas.drawShapesWithFill = false

@@ -4,7 +4,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 600
+let preferredWidth = 400
 let preferredHeight = 600
 /*:
  ## Required code
@@ -37,7 +37,27 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+//canvas.drawRectangle(at: Point(x: 0, y: 0), width: preferredWidth, height: preferredHeight)
+
+canvas.drawAxes(withScale: true, by: 50)
+
+for s in stride(from: 0, through: 400, by: 80){
+    for y in stride(from: 0, through: 400, by: 80){
+        //if
+        let purple = Color
+        //else
+        var arrowVertices: [Point] = []
+        arrowVertices.append(Point(x: s, y: y))
+        arrowVertices.append(Point(x: s, y: y))
+        arrowVertices.append(Point(x: s, y: y))
+        arrowVertices.append(Point(x: s, y: y))
+        arrowVertices.append(Point(x: s, y: y))
+        canvas.drawCustomShape(with: arrowVertices)
+    }
+}
+
+
+
 
 /*:
  ## Show the Live View
