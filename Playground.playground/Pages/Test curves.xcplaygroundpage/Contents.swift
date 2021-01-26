@@ -37,7 +37,7 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawAxes(withScale: true, by: 50)
+canvas.drawAxes(withScale: true, by: 50,color: Color.black)
 
 canvas.drawCurve(from: Point(x: 50, y: 300), to: Point(x: 500, y: 300), control1: Point(x: 0, y: 350), control2: Point(x: 500, y: 500), showControlPoints: true)
 

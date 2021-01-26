@@ -37,8 +37,7 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // axes
-canvas.drawAxes()
-canvas.drawAxes(withScale: true, by: 50)
+canvas.drawAxes(withScale: true, by: 50, color: Color.black)
 
 //sky
 //set fill
