@@ -4,7 +4,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 400
+let preferredWidth = 600
 let preferredHeight = 600
 /*:
  ## Required code
@@ -37,52 +37,6 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
-
-//set colors
-let lightorange = Color.init(hue: 30,
-                             saturation: 100,
-                             brightness: 90,
-                             alpha: 100)
-let green = Color.init(hue: 135,
-                       saturation: 100,
-                       brightness: 100,
-                       alpha: 100)
-let cyan = Color.init(hue: 170,
-                      saturation: 100,
-                      brightness: 100,
-                      alpha: 100)
-let darkorange = Color.init(hue: 25,
-                            saturation: 80,
-                            brightness: 90,
-                            alpha: 100)
-
-
-//background
-canvas.fillColor = Color.black
-canvas.drawRectangle(at: Point(x: 0, y: 0), width: preferredWidth, height: preferredHeight)
-
-canvas.fillColor = Color.black
-//canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400)
-
-//circles
-for f in stride(from: 24, to: 375, by: 117){
-    for d in stride(from: 24, to: 375, by: 117){
-        
-    
-    if f == 24{
-        canvas.fillColor = lightorange
-    }
-    if f == 141{
-        canvas.fillColor = green
-    }
-    if f == 258{
-        canvas.fillColor = cyan
-    }
-        canvas.drawEllipse(at: Point(x: f + 58, y: d + 58), width: 110, height: 110)
-}
-    }
-
-//repeat dragon pattern
 for z in stride(from: 24, to: 375, by: 117){
     for y in stride(from: 24, to: 375, by: 117){
    
@@ -129,24 +83,8 @@ for z in stride(from: 24, to: 375, by: 117){
         dragonVertices.append(Point(x: z + 19, y: y + 52))
         dragonVertices.append(Point(x: z + 16, y: y + 55))
         canvas.drawCustomShape(with: dragonVertices)
-        
-        //mouth
-        canvas.defaultLineWidth = -2
-        canvas.lineColor = Color.black
-        //canvas.drawLine(from: Point(x: z + 21, y: y + 55), to: Point(x: z + 28, y: y + 61))
-        //canvas.drawLine(from: Point(x: z + 28, y: y + 61), to: Point(x: z + 31, y: y + 62))
-    
-        
     }
 }
-
-
-
-//text
-canvas.textColor = darkorange
-
-
-canvas.drawAxes(withScale: true, by: 50, color: .white)
 /*:
  ## Show the Live View
  Don't see any results?
