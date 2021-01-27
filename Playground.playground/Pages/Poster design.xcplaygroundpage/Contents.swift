@@ -39,24 +39,58 @@ PlaygroundPage.current.liveView = canvas
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 
 //set colors
-let lightorange = Color.init(hue: 38, saturation: 100, brightness: 85, alpha: 100)
-let greenblue = Color.init(hue: 150, saturation: 60, brightness: 70, alpha: 100)
-let green = Color.init(hue: 110, saturation: 60, brightness: 70, alpha: 100)
-let darkorange = Color.init(hue: 25, saturation: 80, brightness: 80, alpha: 100)
+let lightorange = Color.init(hue: 45,
+                             saturation: 100,
+                             brightness: 100,
+                             alpha: 100)
+let cyan = Color.init(hue: 170,
+                      saturation: 60,
+                      brightness: 100,
+                      alpha: 100)
+let green = Color.init(hue: 110,
+                       saturation: 65,
+                       brightness: 100,
+                       alpha: 100)
+let darkorange = Color.init(hue: 25,
+                            saturation: 80,
+                            brightness: 90,
+                            alpha: 100)
+
+
+//background
+canvas.fillColor = Color.black
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: preferredWidth, height: preferredHeight)
+
+canvas.fillColor = Color.black
+//canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 400)
+
+//rectangles
+for f in stride(from: 0, to: 400, by: 133){
+    
+    if f == 0{
+        canvas.fillColor = lightorange
+    }
+    if f == 133{
+        canvas.fillColor = green
+    }
+    if f == 266{
+        canvas.fillColor = cyan
+    }
+    canvas.drawRectangle(at: Point(x: f + 8, y: 0), width: 120, height: 400)
+}
 
 //repeat dragon pattern
-for z in stride(from: 0, through: 300, by: 100){
+for z in stride(from: 10, through: 300, by: 133){
     for y in stride(from: 0, through: 300, by: 100){
-        //if
-        //else
-        canvas.fillColor = Color.init(hue: 25, saturation: 80, brightness: 80, alpha: 100)
-        
+   
+        canvas.fillColor = Color.black
+            
         var dragonVertices: [Point] = []
-        dragonVertices.append(Point(x: z + 16, y: y + 53))
+        dragonVertices.append(Point(x: z + 16, y: y + 55))
         dragonVertices.append(Point(x: z + 22, y: y + 62))
         dragonVertices.append(Point(x: z + 30, y: y + 68))
         dragonVertices.append(Point(x: z + 31, y: y + 76))
-        dragonVertices.append(Point(x: z + 38, y: y + 74))
+        dragonVertices.append(Point(x: z + 38, y: y + 75))
         dragonVertices.append(Point(x: z + 60, y: y + 92))
         dragonVertices.append(Point(x: z + 46, y: y + 72))
         dragonVertices.append(Point(x: z + 57, y: y + 80))
@@ -69,8 +103,8 @@ for z in stride(from: 0, through: 300, by: 100){
         dragonVertices.append(Point(x: z + 70, y: y + 84))
         dragonVertices.append(Point(x: z + 67, y: y + 97))
         dragonVertices.append(Point(x: z + 75, y: y + 90))
-        dragonVertices.append(Point(x: z + 80, y: y + 69))
-        dragonVertices.append(Point(x: z + 83, y: y + 26))
+        dragonVertices.append(Point(x: z + 83, y: y + 69))
+        dragonVertices.append(Point(x: z + 85, y: y + 20))
         dragonVertices.append(Point(x: z + 72, y: y + 41))
         dragonVertices.append(Point(x: z + 65, y: y + 43))
         dragonVertices.append(Point(x: z + 59, y: y + 40))
@@ -79,7 +113,7 @@ for z in stride(from: 0, through: 300, by: 100){
         dragonVertices.append(Point(x: z + 69, y: y + 29))
         dragonVertices.append(Point(x: z + 67, y: y + 15))
         dragonVertices.append(Point(x: z + 70, y: y + 10))
-        dragonVertices.append(Point(x: z + 18, y: y + 2))
+        dragonVertices.append(Point(x: z + 68, y: y + 2))
         dragonVertices.append(Point(x: z + 68, y: y + 8))
         dragonVertices.append(Point(x: z + 65, y: y + 12))
         dragonVertices.append(Point(x: z + 64, y: y + 22))
@@ -89,10 +123,16 @@ for z in stride(from: 0, through: 300, by: 100){
         dragonVertices.append(Point(x: z + 39, y: y + 58))
         dragonVertices.append(Point(x: z + 35, y: y + 60))
         dragonVertices.append(Point(x: z + 21, y: y + 55))
-        dragonVertices.append(Point(x: z + 19, y: y + 50))
-        dragonVertices.append(Point(x: z + 16, y: y + 53))
-        
+        dragonVertices.append(Point(x: z + 19, y: y + 52))
+        dragonVertices.append(Point(x: z + 16, y: y + 55))
         canvas.drawCustomShape(with: dragonVertices)
+        
+        //mouth
+        canvas.defaultLineWidth = -2
+        canvas.lineColor = Color.black
+        //canvas.drawLine(from: Point(x: z + 21, y: y + 55), to: Point(x: z + 28, y: y + 61))
+        //canvas.drawLine(from: Point(x: z + 28, y: y + 61), to: Point(x: z + 31, y: y + 62))
+    
         
     }
 }
@@ -100,6 +140,7 @@ for z in stride(from: 0, through: 300, by: 100){
 
 
 //text
+canvas.textColor = darkorange
 
 
 canvas.drawAxes(withScale: true, by: 50, color: .white)
