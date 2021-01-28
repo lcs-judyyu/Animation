@@ -69,16 +69,16 @@ for f in stride(from: 24, to: 375, by: 117){
     for d in stride(from: 24, to: 375, by: 117){
         
     
-    if f == 24{
+    if f <= 24{
         canvas.fillColor = lightorange
     }
     if f == 141{
         canvas.fillColor = green
     }
-    if f == 258{
+    if f >= 258{
         canvas.fillColor = cyan
     }
-        canvas.drawEllipse(at: Point(x: f + 58, y: d + 58), width: 110, height: 110)
+        canvas.drawEllipse(at: Point(x: f + 58, y: d + 58), width: 111, height: 111)
 }
     }
 
@@ -129,18 +129,24 @@ for z in stride(from: 24, to: 375, by: 117){
         dragonVertices.append(Point(x: z + 19, y: y + 52))
         dragonVertices.append(Point(x: z + 16, y: y + 55))
         canvas.drawCustomShape(with: dragonVertices)
-        
+    }
+}
+
+//squares
+canvas.fillColor = lightorange
+var squareVertices: [Point] = []
+squareVertices.append(Point(x: 140, y: 115))
+squareVertices.append(Point(x: 110, y: 145))
+squareVertices.append(Point(x: 140, y: 170))
+squareVertices.append(Point(x: 170, y: 145))
+squareVertices.append(Point(x: 140, y: 115))
+//canvas.drawCustomShape(with: squareVertices)
         //mouth
         canvas.defaultLineWidth = -2
         canvas.lineColor = Color.black
         //canvas.drawLine(from: Point(x: z + 21, y: y + 55), to: Point(x: z + 28, y: y + 61))
         //canvas.drawLine(from: Point(x: z + 28, y: y + 61), to: Point(x: z + 31, y: y + 62))
     
-        
-    }
-}
-
-
 
 //text
 canvas.textColor = darkorange

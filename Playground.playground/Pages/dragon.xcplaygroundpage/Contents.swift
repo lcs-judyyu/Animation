@@ -85,6 +85,63 @@ for z in stride(from: 24, to: 375, by: 117){
         canvas.drawCustomShape(with: dragonVertices)
     }
 }
+
+
+for z in stride(from: 0, to: 24, by: 24){
+    for y in stride(from: 0, to: 24, by: 24){
+   
+        canvas.fillColor = Color.black
+            
+        var dragonVertices: [Point] = []
+        dragonVertices.append(Point(x: z + 56, y: y + 192))
+        dragonVertices.append(Point(x: z + 77, y: y + 217))
+        dragonVertices.append(Point(x: z + 105, y: y + 238))
+        dragonVertices.append(Point(x: z + 108, y: y + 266))
+        dragonVertices.append(Point(x: z + 133, y: y + 262))
+        
+        dragonVertices.append(Point(x: z + 210, y: y + 322))
+        dragonVertices.append(Point(x: z + 161, y: y + 252))
+        dragonVertices.append(Point(x: z + 199, y: y + 280))
+        dragonVertices.append(Point(x: z + 171, y: y + 245))
+        dragonVertices.append(Point(x: z + 192, y: y + 252))
+        
+        dragonVertices.append(Point(x: z + 175, y: y + 231))
+        dragonVertices.append(Point(x: z + 171, y: y + 213))
+        dragonVertices.append(Point(x: z + 164, y: y + 196))
+        dragonVertices.append(Point(x: z + 241, y: y + 248))
+        dragonVertices.append(Point(x: z + 245, y: y + 294))
+        
+        dragonVertices.append(Point(x: z + 234, y: y + 339))
+        dragonVertices.append(Point(x: z + 262, y: y + 315))
+        dragonVertices.append(Point(x: z + 290, y: y + 241))
+        dragonVertices.append(Point(x: z + 297, y: y + 70))
+        dragonVertices.append(Point(x: z + 252, y: y + 143))
+        
+        dragonVertices.append(Point(x: z + 227, y: y + 150))
+        dragonVertices.append(Point(x: z + 206, y: y + 140))
+        dragonVertices.append(Point(x: z + 178, y: y + 105))
+        dragonVertices.append(Point(x: z + 189, y: y + 87))
+        dragonVertices.append(Point(x: z + 241, y: y + 101))
+        
+        dragonVertices.append(Point(x: z + 234, y: y + 52))
+        dragonVertices.append(Point(x: z + 245, y: y + 35))
+        dragonVertices.append(Point(x: z + 238, y: y + 7))
+        dragonVertices.append(Point(x: z + 238, y: y + 28))
+        dragonVertices.append(Point(x: z + 227, y: y + 42))
+        
+        dragonVertices.append(Point(x: z + 224, y: y + 77))
+        dragonVertices.append(Point(x: z + 136, y: y + 49))
+        dragonVertices.append(Point(x: z + 108, y: y + 80))
+        dragonVertices.append(Point(x: z + 140, y: y + 182))
+        dragonVertices.append(Point(x: z + 136, y: y + 203))
+        
+        dragonVertices.append(Point(x: z + 122, y: y + 210))
+        dragonVertices.append(Point(x: z + 73, y: y + 192))
+        dragonVertices.append(Point(x: z + 66, y: y + 182))
+        dragonVertices.append(Point(x: z + 56, y: y + 192))
+        canvas.drawCustomShape(with: dragonVertices)
+    }
+}
 /*:
  ## Show the Live View
  Don't see any results?
