@@ -83,54 +83,53 @@ for f in stride(from: 24, to: 375, by: 117){
     }
 
 //repeat dragon pattern
-for z in stride(from: 24, to: 375, by: 117){
-    for y in stride(from: 24, to: 375, by: 117){
-   
+
         canvas.fillColor = Color.black
             
+canvas.translate(to: Point(x: 30, y: 30))
+
+        let scaleFactor = 3
         var dragonVertices: [Point] = []
-        dragonVertices.append(Point(x: z + 16, y: y + 55))
-        dragonVertices.append(Point(x: z + 22, y: y + 62))
-        dragonVertices.append(Point(x: z + 30, y: y + 68))
-        dragonVertices.append(Point(x: z + 31, y: y + 76))
-        dragonVertices.append(Point(x: z + 38, y: y + 75))
-        dragonVertices.append(Point(x: z + 60, y: y + 92))
-        dragonVertices.append(Point(x: z + 46, y: y + 72))
-        dragonVertices.append(Point(x: z + 57, y: y + 80))
-        dragonVertices.append(Point(x: z + 49, y: y + 70))
-        dragonVertices.append(Point(x: z + 55, y: y + 72))
-        dragonVertices.append(Point(x: z + 50, y: y + 66))
-        dragonVertices.append(Point(x: z + 49, y: y + 61))
-        dragonVertices.append(Point(x: z + 47, y: y + 56))
-        dragonVertices.append(Point(x: z + 69, y: y + 71))
-        dragonVertices.append(Point(x: z + 70, y: y + 84))
-        dragonVertices.append(Point(x: z + 67, y: y + 97))
-        dragonVertices.append(Point(x: z + 75, y: y + 90))
-        dragonVertices.append(Point(x: z + 83, y: y + 69))
-        dragonVertices.append(Point(x: z + 85, y: y + 20))
-        dragonVertices.append(Point(x: z + 72, y: y + 41))
-        dragonVertices.append(Point(x: z + 65, y: y + 43))
-        dragonVertices.append(Point(x: z + 59, y: y + 40))
-        dragonVertices.append(Point(x: z + 51, y: y + 30))
-        dragonVertices.append(Point(x: z + 54, y: y + 25))
-        dragonVertices.append(Point(x: z + 69, y: y + 29))
-        dragonVertices.append(Point(x: z + 67, y: y + 15))
-        dragonVertices.append(Point(x: z + 70, y: y + 10))
-        dragonVertices.append(Point(x: z + 68, y: y + 2))
-        dragonVertices.append(Point(x: z + 68, y: y + 8))
-        dragonVertices.append(Point(x: z + 65, y: y + 12))
-        dragonVertices.append(Point(x: z + 64, y: y + 22))
-        dragonVertices.append(Point(x: z + 39, y: y + 14))
-        dragonVertices.append(Point(x: z + 31, y: y + 23))
-        dragonVertices.append(Point(x: z + 40, y: y + 52))
-        dragonVertices.append(Point(x: z + 39, y: y + 58))
-        dragonVertices.append(Point(x: z + 35, y: y + 60))
-        dragonVertices.append(Point(x: z + 21, y: y + 55))
-        dragonVertices.append(Point(x: z + 19, y: y + 52))
-        dragonVertices.append(Point(x: z + 16, y: y + 55))
-        canvas.drawCustomShape(with: dragonVertices)
-    }
-}
+        dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
+        dragonVertices.append(Point(x: 22 * scaleFactor, y: 62 * scaleFactor))
+        dragonVertices.append(Point(x: 30 * scaleFactor, y: 68 * scaleFactor))
+        dragonVertices.append(Point(x: 31 * scaleFactor, y: 76 * scaleFactor))
+        dragonVertices.append(Point(x: 38 * scaleFactor, y: 75 * scaleFactor))
+        dragonVertices.append(Point(x: 60 * scaleFactor, y: 92 * scaleFactor))
+        dragonVertices.append(Point(x: 46 * scaleFactor, y: 72 * scaleFactor))
+        dragonVertices.append(Point(x: 57 * scaleFactor, y: 80 * scaleFactor))
+        dragonVertices.append(Point(x: 49 * scaleFactor, y: 70 * scaleFactor))
+        dragonVertices.append(Point(x: 55 * scaleFactor, y: 72 * scaleFactor))
+        dragonVertices.append(Point(x: 50 * scaleFactor, y: 66 * scaleFactor))
+        dragonVertices.append(Point(x: 49 * scaleFactor, y: 61 * scaleFactor))
+        dragonVertices.append(Point(x: 47 * scaleFactor, y: 56 * scaleFactor))
+        dragonVertices.append(Point(x: 69 * scaleFactor, y: 71 * scaleFactor))
+        dragonVertices.append(Point(x: 70 * scaleFactor, y: 84 * scaleFactor))
+        dragonVertices.append(Point(x: 67 * scaleFactor, y: 97 * scaleFactor))
+        dragonVertices.append(Point(x: 75 * scaleFactor, y: 90 * scaleFactor))
+        dragonVertices.append(Point(x: 83 * scaleFactor, y: 69 * scaleFactor))
+        dragonVertices.append(Point(x: 85 * scaleFactor, y: 20 * scaleFactor))
+        dragonVertices.append(Point(x: 72 * scaleFactor, y: 41 * scaleFactor))
+        dragonVertices.append(Point(x: 65 * scaleFactor, y: 43 * scaleFactor))
+        dragonVertices.append(Point(x: 59 * scaleFactor, y: 40 * scaleFactor))
+        dragonVertices.append(Point(x: 51 * scaleFactor, y: 30 * scaleFactor))
+        dragonVertices.append(Point(x: 54 * scaleFactor, y: 25 * scaleFactor))
+        dragonVertices.append(Point(x: 69 * scaleFactor, y: 29 * scaleFactor))
+        dragonVertices.append(Point(x: 67 * scaleFactor, y: 15 * scaleFactor))
+        dragonVertices.append(Point(x: 70 * scaleFactor, y: 10 * scaleFactor))
+        dragonVertices.append(Point(x: 68 * scaleFactor, y: 2 * scaleFactor))
+        dragonVertices.append(Point(x: 68 * scaleFactor, y: 8 * scaleFactor))
+        dragonVertices.append(Point(x: 65 * scaleFactor, y: 12 * scaleFactor))
+        dragonVertices.append(Point(x: 64 * scaleFactor, y: 22 * scaleFactor))
+        dragonVertices.append(Point(x: 39 * scaleFactor, y: 14 * scaleFactor))
+        dragonVertices.append(Point(x: 31 * scaleFactor, y: 23 * scaleFactor))
+        dragonVertices.append(Point(x: 40 * scaleFactor, y: 52 * scaleFactor))
+        dragonVertices.append(Point(x: 39 * scaleFactor, y: 58 * scaleFactor))
+        dragonVertices.append(Point(x: 35 * scaleFactor, y: 60 * scaleFactor))
+        dragonVertices.append(Point(x: 21 * scaleFactor, y: 55 * scaleFactor))
+        dragonVertices.append(Point(x: 19 * scaleFactor, y: 52 * scaleFactor))
+        dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
+        //canvas.drawCustomShape(with: dragonVertices)
 
 //squares
 canvas.fillColor = lightorange
@@ -141,15 +140,14 @@ squareVertices.append(Point(x: 140, y: 170))
 squareVertices.append(Point(x: 170, y: 145))
 squareVertices.append(Point(x: 140, y: 115))
 //canvas.drawCustomShape(with: squareVertices)
-        //mouth
-        canvas.defaultLineWidth = -2
-        canvas.lineColor = Color.black
-        //canvas.drawLine(from: Point(x: z + 21, y: y + 55), to: Point(x: z + 28, y: y + 61))
-        //canvas.drawLine(from: Point(x: z + 28, y: y + 61), to: Point(x: z + 31, y: y + 62))
-    
-
+     
+canvas.translate(to: Point(x: -30, y: -30))
 //text
-canvas.textColor = darkorange
+canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
+canvas.drawText(message: "Imagine", at: Point(x: 20, y: 420), size: 85, kerning: 2, typeFace: .script)
+canvas.drawText(message: "Dragon", at: Point(x: 180, y: 375), size: 85, kerning: 2, typeFace: .script)
+
+canvas.drawText(message: "July 13, 2019", at: Point(x: 20, y: 550), size: 20, kerning: 1, typeFace: helveticaBold)
 
 
 canvas.drawAxes(withScale: true, by: 50, color: .white)

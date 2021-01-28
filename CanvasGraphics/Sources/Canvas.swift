@@ -12,6 +12,12 @@ public extension Int {
     }
 }
 
+public enum CanvasTypeFace: String {
+    case helveticaBold = "Helvetica Bold"
+    case script = "Brush Script MT Italic"
+    case scriptAlternate = "Apple Chancery Chancery"
+}
+
 /// Set to High (2x) or Ultra (4x) when generating output for printing, otherwise use Standard.
 public enum Quality : Int {
     case Standard = 1
@@ -244,7 +250,7 @@ public class Canvas : NSImageView, CustomPlaygroundDisplayConvertible {
          - kerning: The spacing between letters of the text. 0.0 is neutral, negative values draw letters together, positive values move letters further apart.
      
      */
-    public func drawText(message: String, at: Point, size: Int = 24, kerning : Float = 0.0)  {
+    public func drawText(message: String, at: Point, size: Int = 24, kerning : Float = 0.0, typeFace: CanvasTypeFace = .helveticaBold)  {
                 
         // Set attributes of shape based on the canvas scale factor
         var size = size
@@ -261,7 +267,7 @@ public class Canvas : NSImageView, CustomPlaygroundDisplayConvertible {
         let fieldColor : NSColor = NSColor(hue: textColor.translatedHue, saturation: textColor.translatedSaturation, brightness: textColor.translatedBrightness, alpha: textColor.translatedAlpha)
         
         // set the font to Helvetica Bold
-        let fieldFont = NSFont(name: "Helvetica Bold", size: size.asCGFloat())
+        let fieldFont = NSFont(name: typeFace.rawValue, size: size.asCGFloat())
         
         // set the line spacing to 1
         let paraStyle = NSMutableParagraphStyle()
