@@ -265,22 +265,24 @@ dragonVertices.append(Point(x: 77 * scaleFactor, y: 11 * scaleFactor))
 
 
 //seventh
-dragonVertices.append(Point(x: 82 * scaleFactor, y: 14 * scaleFactor))
+dragonVertices.append(Point(x: 80 * scaleFactor, y: 14 * scaleFactor))
 dragonVertices.append(Point(x: 82 * scaleFactor, y: 18 * scaleFactor))
 
 dragonVertices.append(Point(x: 79 * scaleFactor, y: 15 * scaleFactor))
 dragonVertices.append(Point(x: 81 * scaleFactor, y: 20 * scaleFactor))
 
+dragonVertices.append(Point(x: 79 * scaleFactor, y: 20 * scaleFactor))
 
 
-dragonVertices.append(Point(x: 81 * scaleFactor, y: 20 * scaleFactor))
+dragonVertices.append(Point(x: 80 * scaleFactor, y: 17 * scaleFactor))
+dragonVertices.append(Point(x: 74 * scaleFactor, y: 20 * scaleFactor))
 
-
-
+dragonVertices.append(Point(x: 76 * scaleFactor, y: 17 * scaleFactor))
+dragonVertices.append(Point(x: 68 * scaleFactor, y: 22 * scaleFactor))
 
 
 //last sharp
-dragonVertices.append(Point(x: 70 * scaleFactor, y: 20 * scaleFactor))
+dragonVertices.append(Point(x: 71 * scaleFactor, y: 19 * scaleFactor))
 dragonVertices.append(Point(x: 61 * scaleFactor, y: 21 * scaleFactor))
 
 
@@ -296,6 +298,7 @@ dragonVertices.append(Point(x: 19 * scaleFactor, y: 53 * scaleFactor))
 dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
 canvas.drawCustomShape(with: dragonVertices)
 
+canvas.defaultLineWidth = -1
 canvas.drawAxes(withScale: true, by: 20, color: .black)
 canvas.defaultLineWidth = 2
 canvas.drawAxes(color: .black)
