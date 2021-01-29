@@ -55,6 +55,15 @@ let darkorange = Color.init(hue: 25,
                             saturation: 80,
                             brightness: 90,
                             alpha: 100)
+let white = Color.init(hue: 0,
+                       saturation: 0,
+                       brightness: 100,
+                       alpha: 100)
+let yellow = Color.init(hue: 60,
+                        saturation: 90,
+                        brightness: 100,
+                        alpha: 80)
+let beige = Color.init(hue: 60, saturation: 7, brightness: 100, alpha: 100)
 
 
 //background
@@ -82,13 +91,49 @@ for f in stride(from: 24, to: 375, by: 117){
 }
     }
 
+//squares
+for z in stride(from: 141, to: 375, by: 117){
+    for y in stride(from: 141, to: 375, by: 117){
+       
+        if 141 == z{
+            canvas.fillColor = lightorange
+        }
+        else{
+        canvas.fillColor = green
+        }
+        
+        var lefttriangleVertices: [Point] = []
+        lefttriangleVertices.append(Point(x: z, y: y - 26))
+        lefttriangleVertices.append(Point(x: z - 26, y: y ))
+        lefttriangleVertices.append(Point(x: z, y: y + 26))
+        lefttriangleVertices.append(Point(x: z, y: y - 26))
+        canvas.drawCustomShape(with: lefttriangleVertices)
+        
+    
+        if z < 258{
+                canvas.fillColor = green
+            }
+        else{
+            canvas.fillColor = cyan
+            }
+        
+        var righttriangleVertices: [Point] = []
+        righttriangleVertices.append(Point(x: z, y: y - 26))
+        righttriangleVertices.append(Point(x: z + 26, y: y ))
+        righttriangleVertices.append(Point(x: z, y: y + 26))
+        righttriangleVertices.append(Point(x: z, y: y - 26))
+        canvas.drawCustomShape(with: righttriangleVertices)
+    }
+}
+        
+
 //repeat dragon pattern
 
-        canvas.fillColor = Color.black
+canvas.fillColor = Color.init(hue: 0, saturation: 100, brightness: 0, alpha: 89)
             
-canvas.translate(to: Point(x: 30, y: 30))
+canvas.translate(to: Point(x: 30, y: 40))
 
-        let scaleFactor = 3
+        let scaleFactor = 2
         var dragonVertices: [Point] = []
         dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
         dragonVertices.append(Point(x: 22 * scaleFactor, y: 62 * scaleFactor))
@@ -129,26 +174,32 @@ canvas.translate(to: Point(x: 30, y: 30))
         dragonVertices.append(Point(x: 21 * scaleFactor, y: 55 * scaleFactor))
         dragonVertices.append(Point(x: 19 * scaleFactor, y: 52 * scaleFactor))
         dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
-        //canvas.drawCustomShape(with: dragonVertices)
+        canvas.drawCustomShape(with: dragonVertices)
 
-//squares
-canvas.fillColor = lightorange
-var squareVertices: [Point] = []
-squareVertices.append(Point(x: 140, y: 115))
-squareVertices.append(Point(x: 110, y: 145))
-squareVertices.append(Point(x: 140, y: 170))
-squareVertices.append(Point(x: 170, y: 145))
-squareVertices.append(Point(x: 140, y: 115))
-//canvas.drawCustomShape(with: squareVertices)
-     
 canvas.translate(to: Point(x: -30, y: -30))
 //text
-canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 100)
+canvas.textColor = yellow
+canvas.drawText(message: "Imagine", at: Point(x: 18, y: 420), size: 85, kerning: 2, typeFace: .script)
+canvas.drawText(message: "Dragon", at: Point(x: 168, y: 360), size: 85, kerning: 2, typeFace: .script)
+
+canvas.textColor = darkorange
+canvas.drawText(message: "Imagine", at: Point(x: 23, y: 420), size: 85, kerning: 2, typeFace: .script)
+canvas.drawText(message: "Dragon", at: Point(x: 173, y: 360), size: 85, kerning: 2, typeFace: .script)
+
+canvas.textColor = white
 canvas.drawText(message: "Imagine", at: Point(x: 20, y: 420), size: 85, kerning: 2, typeFace: .script)
-canvas.drawText(message: "Dragon", at: Point(x: 180, y: 375), size: 85, kerning: 2, typeFace: .script)
+canvas.drawText(message: "Dragon", at: Point(x: 170, y: 360), size: 85, kerning: 2, typeFace: .script)
 
-canvas.drawText(message: "July 13, 2019", at: Point(x: 20, y: 550), size: 20, kerning: 1, typeFace: helveticaBold)
+canvas.textColor = beige
 
+canvas.drawText(message: "July 13, 2019", at: Point(x: 20, y: 550), size: 10, kerning: 0)
+canvas.drawText(message: "Festival d'Été de Québec", at: Point(x: 20, y: 535), size: 10, kerning: 0)
+
+canvas.drawText(message: "with Bishop Briggs", at: Point(x: 180, y: 550), size: 10, kerning: 0)
+canvas.drawText(message: "& KONGOS", at: Point(x: 180, y: 535), size: 10, kerning: 0)
+
+canvas.drawText(message: "Québec, QC", at: Point(x: 320, y: 550), size: 10, kerning: 0)
+canvas.drawText(message: "Canada", at: Point(x: 320, y: 535), size: 10, kerning: 0)
 
 canvas.drawAxes(withScale: true, by: 50, color: .white)
 /*:

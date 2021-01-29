@@ -82,7 +82,7 @@ for z in stride(from: 24, to: 375, by: 117){
         dragonVertices.append(Point(x: z + 21, y: y + 55))
         dragonVertices.append(Point(x: z + 19, y: y + 52))
         dragonVertices.append(Point(x: z + 16, y: y + 55))
-        canvas.drawCustomShape(with: dragonVertices)
+        //canvas.drawCustomShape(with: dragonVertices)
     }
 }
 
@@ -139,11 +139,11 @@ for z in stride(from: 0, to: 24, by: 24){
         dragonVertices.append(Point(x: z + 73, y: y + 192))
         dragonVertices.append(Point(x: z + 66, y: y + 182))
         dragonVertices.append(Point(x: z + 56, y: y + 192))
-        canvas.drawCustomShape(with: dragonVertices)
+        //canvas.drawCustomShape(with: dragonVertices)
     }
 }
 
-let scaleFactor = 3
+let scaleFactor = 1
 var dragonVertices: [Point] = []
 dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
 dragonVertices.append(Point(x: 22 * scaleFactor, y: 62 * scaleFactor))
@@ -157,13 +157,18 @@ dragonVertices.append(Point(x: 49 * scaleFactor, y: 70 * scaleFactor))
 dragonVertices.append(Point(x: 55 * scaleFactor, y: 72 * scaleFactor))
 dragonVertices.append(Point(x: 50 * scaleFactor, y: 66 * scaleFactor))
 dragonVertices.append(Point(x: 49 * scaleFactor, y: 61 * scaleFactor))
-dragonVertices.append(Point(x: 47 * scaleFactor, y: 56 * scaleFactor))
+dragonVertices.append(Point(x: 50 * scaleFactor, y: 56 * scaleFactor))
 dragonVertices.append(Point(x: 69 * scaleFactor, y: 71 * scaleFactor))
 dragonVertices.append(Point(x: 70 * scaleFactor, y: 84 * scaleFactor))
+
 dragonVertices.append(Point(x: 67 * scaleFactor, y: 97 * scaleFactor))
-dragonVertices.append(Point(x: 75 * scaleFactor, y: 90 * scaleFactor))
-dragonVertices.append(Point(x: 83 * scaleFactor, y: 69 * scaleFactor))
-dragonVertices.append(Point(x: 85 * scaleFactor, y: 20 * scaleFactor))
+dragonVertices.append(Point(x: 80 * scaleFactor, y: 94 * scaleFactor))
+dragonVertices.append(Point(x: 126 * scaleFactor, y: 50 * scaleFactor))
+dragonVertices.append(Point(x: 90 * scaleFactor, y: 62 * scaleFactor))
+dragonVertices.append(Point(x: 119 * scaleFactor, y: 40 * scaleFactor))
+dragonVertices.append(Point(x: 93 * scaleFactor, y: 50 * scaleFactor))
+dragonVertices.append(Point(x: 98 * scaleFactor, y: 40 * scaleFactor))
+
 dragonVertices.append(Point(x: 72 * scaleFactor, y: 41 * scaleFactor))
 dragonVertices.append(Point(x: 65 * scaleFactor, y: 43 * scaleFactor))
 dragonVertices.append(Point(x: 59 * scaleFactor, y: 40 * scaleFactor))
@@ -185,6 +190,8 @@ dragonVertices.append(Point(x: 21 * scaleFactor, y: 55 * scaleFactor))
 dragonVertices.append(Point(x: 19 * scaleFactor, y: 52 * scaleFactor))
 dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
 canvas.drawCustomShape(with: dragonVertices)
+
+canvas.drawAxes(color: .black)
 /*:
  ## Show the Live View
  Don't see any results?
