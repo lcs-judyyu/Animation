@@ -267,7 +267,6 @@ canvas.drawText(message: "Canada", at: Point(x: 320, y: 535), size: 10, kerning:
 
 //canvas.drawAxes(withScale: true, by: 50, color: .white)
 
-canvas.copyToClipboard()
 /*:
  ## Show the Live View
  Don't see any results?

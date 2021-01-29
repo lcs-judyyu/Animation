@@ -18,7 +18,7 @@ import PlaygroundSupport
 import CanvasGraphics
 
 // Create canvas
-let canvas = Canvas(width: preferredWidth, height: preferredHeight, quality: .High)
+let canvas = Canvas(width: preferredWidth, height: preferredHeight, quality: .Ultra)
 
 // Create a turtle that will draw upon the canvas
 let turtle = Tortoise(drawingUpon: canvas)
@@ -40,8 +40,9 @@ PlaygroundPage.current.liveView = canvas
 for z in stride(from: 24, to: 375, by: 117){
     for y in stride(from: 24, to: 375, by: 117){
    
-        canvas.fillColor = Color.black
-            
+        //canvas.fillColor = Color.black
+        canvas.defaultBorderWidth = 2
+        
         var dragonVertices: [Point] = []
         dragonVertices.append(Point(x: z + 16, y: y + 55))
         dragonVertices.append(Point(x: z + 22, y: y + 62))
@@ -144,7 +145,10 @@ for z in stride(from: 0, to: 24, by: 24){
 }
 canvas.translate(to: Point(x: 200, y: 200))
 
-canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 80)
+//canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 80)
+canvas.drawShapesWithFill = false
+canvas.drawShapesWithBorders = true
+canvas.defaultBorderWidth = 0
 let scaleFactor = 1
 var dragonVertices: [Point] = []
 dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
@@ -159,7 +163,7 @@ dragonVertices.append(Point(x: 49 * scaleFactor, y: 70 * scaleFactor))
 dragonVertices.append(Point(x: 55 * scaleFactor, y: 72 * scaleFactor))
 dragonVertices.append(Point(x: 50 * scaleFactor, y: 66 * scaleFactor))
 dragonVertices.append(Point(x: 49 * scaleFactor, y: 61 * scaleFactor))
-dragonVertices.append(Point(x: 50 * scaleFactor, y: 56 * scaleFactor))
+dragonVertices.append(Point(x: 53 * scaleFactor, y: 58 * scaleFactor))
 dragonVertices.append(Point(x: 69 * scaleFactor, y: 71 * scaleFactor))
 dragonVertices.append(Point(x: 70 * scaleFactor, y: 84 * scaleFactor))
 //top
@@ -170,14 +174,15 @@ dragonVertices.append(Point(x: 126 * scaleFactor, y: 50 * scaleFactor))
 dragonVertices.append(Point(x: 100 * scaleFactor, y: 62 * scaleFactor))
 dragonVertices.append(Point(x: 119 * scaleFactor, y: 40 * scaleFactor))
 dragonVertices.append(Point(x: 93 * scaleFactor, y: 50 * scaleFactor))
-dragonVertices.append(Point(x: 98 * scaleFactor, y: 40 * scaleFactor))
+dragonVertices.append(Point(x: 105 * scaleFactor, y: 40 * scaleFactor))
 dragonVertices.append(Point(x: 79 * scaleFactor, y: 42 * scaleFactor))
 //end of wings
 dragonVertices.append(Point(x: 72 * scaleFactor, y: 41 * scaleFactor))
 dragonVertices.append(Point(x: 65 * scaleFactor, y: 40 * scaleFactor))
 dragonVertices.append(Point(x: 63 * scaleFactor, y: 37 * scaleFactor))
-dragonVertices.append(Point(x: 70 * scaleFactor, y: 32 * scaleFactor))
+dragonVertices.append(Point(x: 66 * scaleFactor, y: 34 * scaleFactor))
 
+//first sharp of tail
 dragonVertices.append(Point(x: 70 * scaleFactor, y: 34 * scaleFactor))
 dragonVertices.append(Point(x: 80 * scaleFactor, y: 35 * scaleFactor))
 dragonVertices.append(Point(x: 74 * scaleFactor, y: 32 * scaleFactor))
@@ -186,61 +191,100 @@ dragonVertices.append(Point(x: 82 * scaleFactor, y: 29 * scaleFactor))
 dragonVertices.append(Point(x: 93 * scaleFactor, y: 27 * scaleFactor))
 dragonVertices.append(Point(x: 89 * scaleFactor, y: 25 * scaleFactor))
 dragonVertices.append(Point(x: 96 * scaleFactor, y: 18 * scaleFactor))
+dragonVertices.append(Point(x: 91 * scaleFactor, y: 19 * scaleFactor))
 
-dragonVertices.append(Point(x: 91 * scaleFactor, y: 17 * scaleFactor))
-dragonVertices.append(Point(x: 92 * scaleFactor, y: 7 * scaleFactor))
-dragonVertices.append(Point(x: 87 * scaleFactor, y: 9 * scaleFactor))
-dragonVertices.append(Point(x: 83 * scaleFactor, y: 0 * scaleFactor))
-dragonVertices.append(Point(x: 82 * scaleFactor, y: 2 * scaleFactor))
+//fifth sharp
+dragonVertices.append(Point(x: 93 * scaleFactor, y: 8 * scaleFactor))
+dragonVertices.append(Point(x: 89 * scaleFactor, y: 10 * scaleFactor))
+
+//sixth sharp
+dragonVertices.append(Point(x: 91 * scaleFactor, y: 5 * scaleFactor))
+dragonVertices.append(Point(x: 87 * scaleFactor, y: 7 * scaleFactor))
+
+//seventh
+dragonVertices.append(Point(x: 86 * scaleFactor, y: 0 * scaleFactor))
+dragonVertices.append(Point(x: 84 * scaleFactor, y: 2 * scaleFactor))
+
+//eighth
 dragonVertices.append(Point(x: 78 * scaleFactor, y: -1 * scaleFactor))
+dragonVertices.append(Point(x: 77 * scaleFactor, y: 3 * scaleFactor))
 
+//ninth
+dragonVertices.append(Point(x: 66 * scaleFactor, y: 0 * scaleFactor))
+dragonVertices.append(Point(x: 68 * scaleFactor, y: 4 * scaleFactor))
 
-dragonVertices.append(Point(x: 79 * scaleFactor, y: 2 * scaleFactor))
-dragonVertices.append(Point(x: 63 * scaleFactor, y: 1 * scaleFactor))
+//tenth
+dragonVertices.append(Point(x: 55 * scaleFactor, y: 6 * scaleFactor))
+dragonVertices.append(Point(x: 61 * scaleFactor, y: 8 * scaleFactor))
 
-dragonVertices.append(Point(x: 65 * scaleFactor, y: 4 * scaleFactor))
-dragonVertices.append(Point(x: 55 * scaleFactor, y: 5 * scaleFactor))
-dragonVertices.append(Point(x: 61 * scaleFactor, y: 10 * scaleFactor))
-dragonVertices.append(Point(x: 44 * scaleFactor, y: 17 * scaleFactor))
-dragonVertices.append(Point(x: 50 * scaleFactor, y: 14 * scaleFactor))
-dragonVertices.append(Point(x: 41 * scaleFactor, y: 18 * scaleFactor))
-dragonVertices.append(Point(x: 44 * scaleFactor, y: 20 * scaleFactor))
-dragonVertices.append(Point(x: 38 * scaleFactor, y: 19 * scaleFactor))
+dragonVertices.append(Point(x: 47 * scaleFactor, y: 11 * scaleFactor))
+dragonVertices.append(Point(x: 51 * scaleFactor, y: 12 * scaleFactor))
 
-dragonVertices.append(Point(x: 28 * scaleFactor, y: 17 * scaleFactor))
-dragonVertices.append(Point(x: 23 * scaleFactor, y: 9 * scaleFactor))
+//twelveth
+dragonVertices.append(Point(x: 41 * scaleFactor, y: 14 * scaleFactor))
+dragonVertices.append(Point(x: 46 * scaleFactor, y: 15 * scaleFactor))
+
+dragonVertices.append(Point(x: 36 * scaleFactor, y: 17 * scaleFactor))
+dragonVertices.append(Point(x: 32 * scaleFactor, y: 16 * scaleFactor))
+dragonVertices.append(Point(x: 27 * scaleFactor, y: 12 * scaleFactor))
+dragonVertices.append(Point(x: 24 * scaleFactor, y: 9 * scaleFactor))
+//tip of the tail
 dragonVertices.append(Point(x: 9 * scaleFactor, y: 5 * scaleFactor))
-//end of the tail
 
-dragonVertices.append(Point(x: 19 * scaleFactor, y: 17 * scaleFactor))
-dragonVertices.append(Point(x: 24 * scaleFactor, y: 19 * scaleFactor))
-dragonVertices.append(Point(x: 30 * scaleFactor, y: 20 * scaleFactor))
-dragonVertices.append(Point(x: 28 * scaleFactor, y: 21 * scaleFactor))
-dragonVertices.append(Point(x: 42 * scaleFactor, y: 23 * scaleFactor))
 
-dragonVertices.append(Point(x: 41 * scaleFactor, y: 24 * scaleFactor))
-dragonVertices.append(Point(x: 56 * scaleFactor, y: 20 * scaleFactor))
-dragonVertices.append(Point(x: 55 * scaleFactor, y: 22 * scaleFactor))
-dragonVertices.append(Point(x: 60 * scaleFactor, y: 18 * scaleFactor))
-dragonVertices.append(Point(x: 62 * scaleFactor, y: 17 * scaleFactor))
-dragonVertices.append(Point(x: 63 * scaleFactor, y: 18 * scaleFactor))
-dragonVertices.append(Point(x: 71 * scaleFactor, y: 10 * scaleFactor))
+dragonVertices.append(Point(x: 20 * scaleFactor, y: 19 * scaleFactor))
+dragonVertices.append(Point(x: 31 * scaleFactor, y: 19 * scaleFactor))
+dragonVertices.append(Point(x: 35 * scaleFactor, y: 20 * scaleFactor))
+dragonVertices.append(Point(x: 40 * scaleFactor, y: 20 * scaleFactor))
+dragonVertices.append(Point(x: 50 * scaleFactor, y: 19 * scaleFactor))
 
-dragonVertices.append(Point(x: 69 * scaleFactor, y: 12 * scaleFactor))
-dragonVertices.append(Point(x: 81 * scaleFactor, y: 9 * scaleFactor))
-dragonVertices.append(Point(x: 79 * scaleFactor, y: 11 * scaleFactor))
-dragonVertices.append(Point(x: 82 * scaleFactor, y: 17 * scaleFactor))
-dragonVertices.append(Point(x: 82 * scaleFactor, y: 20 * scaleFactor))
-dragonVertices.append(Point(x: 75 * scaleFactor, y: 18 * scaleFactor))
-dragonVertices.append(Point(x: 77 * scaleFactor, y: 21 * scaleFactor))
+//first sharp
+dragonVertices.append(Point(x: 55 * scaleFactor, y: 15 * scaleFactor))
+dragonVertices.append(Point(x: 54 * scaleFactor, y: 19 * scaleFactor))
+
+//second sharp
+dragonVertices.append(Point(x: 60 * scaleFactor, y: 14 * scaleFactor))
+dragonVertices.append(Point(x: 60 * scaleFactor, y: 16 * scaleFactor))
+
+//third
+dragonVertices.append(Point(x: 65 * scaleFactor, y: 12 * scaleFactor))
+dragonVertices.append(Point(x: 70 * scaleFactor, y: 9 * scaleFactor))
+
+//fourth
+dragonVertices.append(Point(x: 68 * scaleFactor, y: 13 * scaleFactor))
+dragonVertices.append(Point(x: 75 * scaleFactor, y: 10 * scaleFactor))
+
+//fifth
+dragonVertices.append(Point(x: 73 * scaleFactor, y: 12 * scaleFactor))
+dragonVertices.append(Point(x: 78 * scaleFactor, y: 10 * scaleFactor))
+
+dragonVertices.append(Point(x: 81 * scaleFactor, y: 10 * scaleFactor))
+
+//sixth
+dragonVertices.append(Point(x: 77 * scaleFactor, y: 11 * scaleFactor))
+
+
+//seventh
+dragonVertices.append(Point(x: 82 * scaleFactor, y: 14 * scaleFactor))
+dragonVertices.append(Point(x: 82 * scaleFactor, y: 18 * scaleFactor))
+
+dragonVertices.append(Point(x: 79 * scaleFactor, y: 15 * scaleFactor))
 dragonVertices.append(Point(x: 81 * scaleFactor, y: 20 * scaleFactor))
 
-dragonVertices.append(Point(x: 68 * scaleFactor, y: 22 * scaleFactor))
-dragonVertices.append(Point(x: 65 * scaleFactor, y: 20 * scaleFactor))
+
+
+dragonVertices.append(Point(x: 81 * scaleFactor, y: 20 * scaleFactor))
+
+
+
+
+
+//last sharp
+dragonVertices.append(Point(x: 70 * scaleFactor, y: 20 * scaleFactor))
 dragonVertices.append(Point(x: 61 * scaleFactor, y: 21 * scaleFactor))
+
+
 dragonVertices.append(Point(x: 50 * scaleFactor, y: 18 * scaleFactor))
-
-
 dragonVertices.append(Point(x: 39 * scaleFactor, y: 20 * scaleFactor))
 dragonVertices.append(Point(x: 32 * scaleFactor, y: 28 * scaleFactor))
 //belly
@@ -252,8 +296,8 @@ dragonVertices.append(Point(x: 19 * scaleFactor, y: 53 * scaleFactor))
 dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
 canvas.drawCustomShape(with: dragonVertices)
 
-canvas.drawAxes(withScale: true, by: 25, color: .black)
-canvas.defaultLineWidth = 5
+canvas.drawAxes(withScale: true, by: 20, color: .black)
+canvas.defaultLineWidth = 2
 canvas.drawAxes(color: .black)
 
 /*:
