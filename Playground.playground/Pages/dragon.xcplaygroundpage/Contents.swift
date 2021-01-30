@@ -140,16 +140,16 @@ for z in stride(from: 0, to: 24, by: 24){
         dragonVertices.append(Point(x: z + 73, y: y + 192))
         dragonVertices.append(Point(x: z + 66, y: y + 182))
         dragonVertices.append(Point(x: z + 56, y: y + 192))
-        canvas.drawCustomShape(with: dragonVertices)
+        //canvas.drawCustomShape(with: dragonVertices)
     }
 }
-canvas.translate(to: Point(x: 200, y: 200))
+canvas.translate(to: Point(x: 100, y: 100))
 
 //canvas.fillColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 80)
 canvas.drawShapesWithFill = false
 canvas.drawShapesWithBorders = true
 canvas.defaultBorderWidth = 0
-let scaleFactor = 1
+let scaleFactor = 3
 var dragonVertices: [Point] = []
 dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
 dragonVertices.append(Point(x: 22 * scaleFactor, y: 62 * scaleFactor))
@@ -296,7 +296,7 @@ dragonVertices.append(Point(x: 35 * scaleFactor, y: 60 * scaleFactor))
 dragonVertices.append(Point(x: 21 * scaleFactor, y: 55 * scaleFactor))
 dragonVertices.append(Point(x: 19 * scaleFactor, y: 53 * scaleFactor))
 dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
-//canvas.drawCustomShape(with: dragonVertices)
+canvas.drawCustomShape(with: dragonVertices)
 
 canvas.defaultLineWidth = -1
 canvas.drawAxes(withScale: true, by: 20, color: .black)

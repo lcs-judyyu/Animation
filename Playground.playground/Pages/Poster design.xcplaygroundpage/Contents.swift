@@ -63,7 +63,14 @@ let yellow = Color.init(hue: 60,
                         saturation: 90,
                         brightness: 100,
                         alpha: 80)
-let beige = Color.init(hue: 60, saturation: 7, brightness: 100, alpha: 100)
+let beige = Color.init(hue: 60,
+                       saturation: 7,
+                       brightness: 100,
+                       alpha: 100)
+let lightyellow = Color.init(hue: 60,
+                             saturation: 100,
+                             brightness: 100,
+                             alpha: 33)
 
 
 //background
@@ -190,7 +197,7 @@ dragonVertices.append(Point(x: 86 * scaleFactor, y: 0 * scaleFactor))
 dragonVertices.append(Point(x: 84 * scaleFactor, y: 2 * scaleFactor))
 
 //eighth
-dragonVertices.append(Point(x: 78 * scaleFactor, y: -1 * scaleFactor))
+dragonVertices.append(Point(x: 78 * scaleFactor, y: 1 * scaleFactor))
 dragonVertices.append(Point(x: 77 * scaleFactor, y: 3 * scaleFactor))
 
 //ninth
@@ -286,29 +293,26 @@ canvas.translate(to: Point(x: -3, y: -55))
 //text
 canvas.textColor = yellow
 canvas.drawText(message: "Imagine", at: Point(x: 18, y: 420), size: 85, kerning: 2, typeFace: .script)
-canvas.drawText(message: "Dragon", at: Point(x: 168, y: 360), size: 85, kerning: 2, typeFace: .script)
+canvas.drawText(message: "Dragons", at: Point(x: 138, y: 360), size: 85, kerning: 2, typeFace: .script)
 
 canvas.textColor = darkorange
 canvas.drawText(message: "Imagine", at: Point(x: 24, y: 420), size: 85, kerning: 2, typeFace: .script)
-canvas.drawText(message: "Dragon", at: Point(x: 174, y: 360), size: 85, kerning: 2, typeFace: .script)
+canvas.drawText(message: "Dragons", at: Point(x: 144, y: 360), size: 85, kerning: 2, typeFace: .script)
 
 canvas.textColor = white
 canvas.drawText(message: "Imagine", at: Point(x: 20, y: 420), size: 85, kerning: 2, typeFace: .script)
-canvas.drawText(message: "Dragon", at: Point(x: 170, y: 360), size: 85, kerning: 2, typeFace: .script)
+canvas.drawText(message: "Dragons", at: Point(x: 140, y: 360), size: 85, kerning: 2, typeFace: .script)
 
 canvas.textColor = beige
 
 canvas.drawText(message: "July 13, 2019", at: Point(x: 20, y: 550), size: 10, kerning: 0, typeFace: .scriptAlternate)
-canvas.drawText(message: "Festival d'Été de Québec", at: Point(x: 20, y: 535), size: 10, kerning: 0)
+canvas.drawText(message: "Festival d'Été de Québec", at: Point(x: 20, y: 535), size: 10, kerning: 0, typeFace: .scriptAlternate)
 
-canvas.drawText(message: "with Bishop Briggs", at: Point(x: 180, y: 550), size: 10, kerning: 0)
-canvas.drawText(message: "& KONGOS", at: Point(x: 180, y: 535), size: 10, kerning: 0)
-
-canvas.drawText(message: "Québec, QC", at: Point(x: 320, y: 550), size: 10, kerning: 0)
-canvas.drawText(message: "Canada", at: Point(x: 320, y: 535), size: 10, kerning: 0)
+canvas.drawText(message: "with Bishop Briggs & KONGOS", at: Point(x: 250, y: 535), size: 10, kerning: 0, typeFace: .scriptAlternate)
+canvas.drawText(message: "Québec, QC, Canada", at: Point(x: 300, y: 550), size: 10, kerning: 0, typeFace: .scriptAlternate)
 
 //lines
-canvas.defaultLineWidth = 2
+canvas.defaultLineWidth = 1
 
 canvas.lineColor = yellow
 canvas.drawLine(from: Point(x: 0, y: 450), to: Point(x: 251, y: 450))
@@ -316,19 +320,33 @@ canvas.drawLine(from: Point(x: 0, y: 450), to: Point(x: 251, y: 450))
 canvas.lineColor = darkorange
 
 //right
-canvas.drawLine(from: Point(x: preferredWidth, y: 520), to: Point(x: 285, y: 520))
+canvas.drawLine(from: Point(x: preferredWidth, y: 520), to: Point(x: 275, y: 520))
+canvas.drawLine(from: Point(x: preferredWidth, y: 500), to: Point(x: 285, y: 500))
+canvas.drawLine(from: Point(x: preferredWidth, y: 490), to: Point(x: 355, y: 490))
+canvas.drawLine(from: Point(x: preferredWidth, y: 475), to: Point(x: 315, y: 475))
+canvas.drawLine(from: Point(x: preferredWidth, y: 455), to: Point(x: 345, y: 455))
+
 
 //left
 canvas.drawLine(from: Point(x: 0, y: 449), to: Point(x: 250, y: 449))
-//canvas.drawLine(from: Point(x: 0, y: 443), to: Point(x: 145, y: 443))
 canvas.drawLine(from: Point(x: 0, y: 430), to: Point(x: 105, y: 430))
 canvas.drawLine(from: Point(x: 0, y: 410), to: Point(x: 80, y: 410))
 canvas.drawLine(from: Point(x: 0, y: 400), to: Point(x: 40, y: 400))
 
+//lightning
+canvas.fillColor = lightyellow
+let scaleFactor1 = 1
+var lightVertices: [Point] = []
+lightVertices.append(Point(x: 200 * scaleFactor1, y: 570 * scaleFactor1))
+lightVertices.append(Point(x: 178 * scaleFactor1, y: 550 * scaleFactor1))
+lightVertices.append(Point(x: 192 * scaleFactor1, y: 547 * scaleFactor1))
+lightVertices.append(Point(x: 180 * scaleFactor1, y: 527 * scaleFactor1))
+lightVertices.append(Point(x: 205 * scaleFactor1, y: 549 * scaleFactor1))
+lightVertices.append(Point(x: 191 * scaleFactor1, y: 553 * scaleFactor1))
+lightVertices.append(Point(x: 200 * scaleFactor1, y: 570 * scaleFactor1))
+canvas.drawCustomShape(with: lightVertices)
 
-canvas.lineColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 70)
 //canvas.drawAxes(withScale: true, by: 50, color: .white)
-
 /*:
  ## Show the Live View
  Don't see any results?
