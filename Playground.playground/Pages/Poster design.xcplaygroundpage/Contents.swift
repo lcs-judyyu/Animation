@@ -298,7 +298,7 @@ canvas.drawText(message: "Dragon", at: Point(x: 170, y: 360), size: 85, kerning:
 
 canvas.textColor = beige
 
-canvas.drawText(message: "July 13, 2019", at: Point(x: 20, y: 550), size: 10, kerning: 0)
+canvas.drawText(message: "July 13, 2019", at: Point(x: 20, y: 550), size: 10, kerning: 0, typeFace: .scriptAlternate)
 canvas.drawText(message: "Festival d'Été de Québec", at: Point(x: 20, y: 535), size: 10, kerning: 0)
 
 canvas.drawText(message: "with Bishop Briggs", at: Point(x: 180, y: 550), size: 10, kerning: 0)
@@ -309,6 +309,10 @@ canvas.drawText(message: "Canada", at: Point(x: 320, y: 535), size: 10, kerning:
 
 //lines
 canvas.defaultLineWidth = 2
+
+canvas.lineColor = yellow
+canvas.drawLine(from: Point(x: 0, y: 450), to: Point(x: 251, y: 450))
+
 canvas.lineColor = darkorange
 
 //right
@@ -316,7 +320,13 @@ canvas.drawLine(from: Point(x: preferredWidth, y: 520), to: Point(x: 285, y: 520
 
 //left
 canvas.drawLine(from: Point(x: 0, y: 449), to: Point(x: 250, y: 449))
+//canvas.drawLine(from: Point(x: 0, y: 443), to: Point(x: 145, y: 443))
+canvas.drawLine(from: Point(x: 0, y: 430), to: Point(x: 105, y: 430))
+canvas.drawLine(from: Point(x: 0, y: 410), to: Point(x: 80, y: 410))
+canvas.drawLine(from: Point(x: 0, y: 400), to: Point(x: 40, y: 400))
 
+
+canvas.lineColor = Color.init(hue: 0, saturation: 0, brightness: 100, alpha: 70)
 //canvas.drawAxes(withScale: true, by: 50, color: .white)
 
 /*:

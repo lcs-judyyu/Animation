@@ -15,7 +15,7 @@ public extension Int {
 public enum CanvasTypeFace: String {
     case helveticaBold = "Helvetica Bold"
     case script = "Brush Script MT Italic"
-    case scriptAlternate = "Apple Chancery Chancery"
+    case scriptAlternate = "Chalkduster Regular"
 }
 
 /// Set to High (2x) or Ultra (4x) when generating output for printing, otherwise use Standard.

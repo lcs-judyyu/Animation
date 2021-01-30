@@ -18,7 +18,7 @@ import PlaygroundSupport
 import CanvasGraphics
 
 // Create canvas
-let canvas = Canvas(width: preferredWidth, height: preferredHeight, quality: .Ultra)
+let canvas = Canvas(width: preferredWidth, height: preferredHeight, quality: .Standard)
 
 // Create a turtle that will draw upon the canvas
 let turtle = Tortoise(drawingUpon: canvas)
@@ -140,7 +140,7 @@ for z in stride(from: 0, to: 24, by: 24){
         dragonVertices.append(Point(x: z + 73, y: y + 192))
         dragonVertices.append(Point(x: z + 66, y: y + 182))
         dragonVertices.append(Point(x: z + 56, y: y + 192))
-        //canvas.drawCustomShape(with: dragonVertices)
+        canvas.drawCustomShape(with: dragonVertices)
     }
 }
 canvas.translate(to: Point(x: 200, y: 200))
@@ -296,7 +296,7 @@ dragonVertices.append(Point(x: 35 * scaleFactor, y: 60 * scaleFactor))
 dragonVertices.append(Point(x: 21 * scaleFactor, y: 55 * scaleFactor))
 dragonVertices.append(Point(x: 19 * scaleFactor, y: 53 * scaleFactor))
 dragonVertices.append(Point(x: 16 * scaleFactor, y: 55 * scaleFactor))
-canvas.drawCustomShape(with: dragonVertices)
+//canvas.drawCustomShape(with: dragonVertices)
 
 canvas.defaultLineWidth = -1
 canvas.drawAxes(withScale: true, by: 20, color: .black)
